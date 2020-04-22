@@ -29,8 +29,9 @@
 </p>
 
 <form action="ActionServlet" method="post">
-<button type="submit" name="action" value="top">解答者情報入力画面に進む</button>
+<button type="submit" name="action" value="top">解答者情報入力画面に進む</button><br>
 </form>
+
 
 </body>
 </html>

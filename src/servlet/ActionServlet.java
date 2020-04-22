@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,12 +10,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import action.FormAction;
+
 /**
  * Servlet implementation class ActionServlet
  */
 @WebServlet("/ActionServlet")
 public class ActionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
+	private Map<String,Object> lineData;
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -59,6 +64,28 @@ public class ActionServlet extends HttpServlet {
             case "top":
                 url = "/form.jsp";
                 break;
+            case "form":
+            	FormAction ac = new FormAction();
+
+            	lineData = ac.set(request);
+            	Map<String,String> meMap = ac.vali();
+
+            	if(meMap.isEmpty()) {
+            		request.setAttribute("flg", "0");
+            		url = "/Test1_info.jsp";
+            		break;
+            	}
+            	request.setAttribute("meMap", meMap);
+                url = "/form.jsp";
+                break;
+            case "test1_check":
+            	request.setAttribute("flg", "1");
+            	url = "/Test1_info.jsp";
+                break;
+            case "GoToTest1":
+            	url = "/Test1.jsp";
+                break;
+
             default:
             	url = "/top.jsp";
                 break;
