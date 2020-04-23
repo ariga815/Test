@@ -7,7 +7,7 @@
 <title>適正テスト１</title>
 </head>
 <body>
-<div class="col-5 ml-3">
+<div class="col-10 ml-3">
 
 <h1>テスト１ ＜解答時間５分＞</h1>
 

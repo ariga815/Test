@@ -7,7 +7,7 @@
 <title>解答者情報</title>
 </head>
 <body>
-<div class="col-5 ml-3">
+<div class="col-10 ml-3">
 
 <h1>解答者情報</h1>
 
