@@ -19,7 +19,7 @@
 <input type="radio" name="gender" value="woman">女<br>
 <font color="red">${ meMap.get("genderMe") }</font><br>
 生年月日：<br>
-<input type="text" name="birth"><br>
+<input type="date" name="birth"><br>
 <font color="red">${ meMap.get("birthMe") }</font><br>
 最終学歴：<br>
 （例）〇〇大学、〇〇専門学校<br>
