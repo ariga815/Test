@@ -78,10 +78,6 @@ public class ActionServlet extends HttpServlet {
             	request.setAttribute("meMap", meMap);
                 url = "/form.jsp";
                 break;
-            case "test1_check":
-            	request.setAttribute("flg", "1");
-            	url = "/Test1_info.jsp";
-                break;
             case "GoToTest1":
             	url = "/Test1.jsp";
                 break;
