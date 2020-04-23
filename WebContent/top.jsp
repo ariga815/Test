@@ -7,7 +7,7 @@
 <title>適性検査説明</title>
 </head>
 <body>
-<div class="col-10 ml-3">
+<div class="col-5 ml-3">
 
 <p>あなたの受験者IDは、XXX です。</p>
 
