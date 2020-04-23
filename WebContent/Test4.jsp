@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>適正テスト１</title>
+<title>適正テスト４</title>
 </head>
 <body>
-<h1>テスト１ ＜解答時間５分＞</h1>
+<h1>テスト４ ＜解答時間５分＞</h1>
 
 <form action="ActionServlet" method="post">
-<p><b>(1)並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）今日になって（２）全身が（３）テニスをしたら （４） 筋肉痛になった（５） 昨日久しぶりに<br>
+<p><b>(1) 30 , 34 , □ , 42 , 46</b><br>
+（１）36（２）40（３）38（４）50（５）39<br>
 <input type="radio" name="answer1" value="（１）">（１）<br>
 <input type="radio" name="answer1" value="（２）">（２）<br>
 <input type="radio" name="answer1" value="（３）">（３）<br>
@@ -19,8 +19,8 @@
 <input type="radio" name="answer1" value="（５）">（５）<br>
 </p>
 
-<p><b>(2) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）お買い得だ（２）新機能がついた（３）よくなったので（４）上にデザインも（５）先月発売された新商品は<br>
+<p><b>(2) 102 , □ , 106 , 108 , 110</b><br>
+（１）102（２）103（３）104（４）105（５）106<br>
 <input type="radio" name="answer2" value="（１）">（１）<br>
 <input type="radio" name="answer2" value="（２）">（２）<br>
 <input type="radio" name="answer2" value="（３）">（３）<br>
@@ -28,8 +28,8 @@
 <input type="radio" name="answer2" value="（５）">（５）<br>
 </p>
 
-<p><b>(3) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）知人と会うと（２）話を聞かされる（３）いつも（４）最近観た映画の（５）映画好きの<br>
+<p><b>(3) 90 , 93 , 96 , □ , 102</b><br>
+（１）100（２）97 （３）98（４）99（５）101<br>
 <input type="radio" name="answer3" value="（１）">（１）<br>
 <input type="radio" name="answer3" value="（２）">（２）<br>
 <input type="radio" name="answer3" value="（３）">（３）<br>
@@ -37,8 +37,8 @@
 <input type="radio" name="answer3" value="（５）">（５）<br>
 </p>
 
-<p><b>(4)並べ替えたときに３番目になる選択肢を解答してください。</b><br>
-（１）学生時代からの（２）身が入らないのは（３）悪い癖だ（４）締め切り直前にならないと（５）仕事に<br>
+<p><b>(4) 81 , □ , 85 , 87 , 89</b><br>
+（１）83（２）81（３）82（４）85（５）84<br>
 <input type="radio" name="answer4" value="（１）">（１）<br>
 <input type="radio" name="answer4" value="（２）">（２）<br>
 <input type="radio" name="answer4" value="（３）">（３）<br>
@@ -46,8 +46,8 @@
 <input type="radio" name="answer4" value="（５）">（５）<br>
 </p>
 
-<p><b>(5) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）と評判だから（２）並ぶことになっても（３）あのお店はおいしい （４）少しも苦にならない（５）少々の行列なら<br>
+<p><b>(5) 64 , 70 , □ , 82 , 88</b><br>
+（１）76（２）72（３）80（４）70（５）75<br>
 <input type="radio" name="answer5" value="（１）">（１）<br>
 <input type="radio" name="answer5" value="（２）">（２）<br>
 <input type="radio" name="answer5" value="（３）">（３）<br>
@@ -55,8 +55,8 @@
 <input type="radio" name="answer5" value="（５）">（５）<br>
 </p>
 
-<p><b>(6) 並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）が発生する（２）トンネルの入り口（３）があると渋滞（４）速度を落とす車（５）で圧迫感から一時的に<br>
+<p><b>(6) －20 , －16 , －12 , □ , －4</b><br>
+（１）8（２）－ 10（３）－8（４）－9（５）－6<br>
 <input type="radio" name="answer6" value="（１）">（１）<br>
 <input type="radio" name="answer6" value="（２）">（２）<br>
 <input type="radio" name="answer6" value="（３）">（３）<br>
@@ -64,8 +64,8 @@
 <input type="radio" name="answer6" value="（５）">（５）<br>
 </p>
 
-<p><b>(7) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１） 気持ちよく会議室を（２）利用できるように（３）ほかの人が（４）守ってほしい（５）マナーを<br>
+<p><b>(7) －80 , － 83 , －86 , □ , －92</b><br>
+（１）－ 87（２）－ 90（３）－ 89（４）－ 80（５）－ 83<br>
 <input type="radio" name="answer7" value="（１）">（１）<br>
 <input type="radio" name="answer7" value="（２）">（２）<br>
 <input type="radio" name="answer7" value="（３）">（３）<br>
@@ -73,8 +73,8 @@
 <input type="radio" name="answer7" value="（５）">（５）<br>
 </p>
 
-<p><b>(8)並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）身につける前に（２）明確にすべきだ（３）テクニックを（４）具体的な就職活動の（５）自分は何がしたいのかを<br>
+<p><b>(8) －6 , －9 , －12 , □ , －18</b><br>
+（１）－9（２）－15（３）－ 12（４）－13（５）－17<br>
 <input type="radio" name="answer8" value="（１）">（１）<br>
 <input type="radio" name="answer8" value="（２）">（２）<br>
 <input type="radio" name="answer8" value="（３）">（３）<br>
@@ -82,8 +82,8 @@
 <input type="radio" name="answer8" value="（５）">（５）<br>
 </p>
 
-<p><b>(9)並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）山頂に登ったときの（２）爽快感（３）登山中は辛いが（４）達成感や（５）は何事にも代え難い<br>
+<p><b>(9) 48 , 43 , 38 , 33 , □</b><br>
+（１）30（２）22（３）25（４）28（５）26<br>
 <input type="radio" name="answer9" value="（１）">（１）<br>
 <input type="radio" name="answer9" value="（２）">（２）<br>
 <input type="radio" name="answer9" value="（３）">（３）<br>
@@ -91,8 +91,8 @@
 <input type="radio" name="answer9" value="（５）">（５）<br>
 </p>
 
-<p><b>(10) 並べ替えたときに5番目になる選択肢を解答してください。</b><br>
-（１）話してしまう（２） 持たせる方が （３） 露骨に全てを（４）いいこともある（５）より含みを<br>
+<p><b>(10) 90 , 96 , □ , 108 , 114</b><br>
+（１）100（２）104（３）98（４）102（５）106<br>
 <input type="radio" name="answer10" value="（１）">（１）<br>
 <input type="radio" name="answer10" value="（２）">（２）<br>
 <input type="radio" name="answer10" value="（３）">（３）<br>
@@ -100,8 +100,8 @@
 <input type="radio" name="answer10" value="（５）">（５）<br>
 </p>
 
-<p><b>(11) 並べ替えたときに3番目になる選択肢を解答してください。</b><br>
-（１）成功しようとすると（２）身のほどを（３）人の真似をして（４）失敗する（５）知らずに<br>
+<p><b>(11)－37 , －29 , －21 , □ , －5</b><br>
+（１）－9（２）－ 15（３）－11（４）－ 20（５）－13<br>
 <input type="radio" name="answer11" value="（１）">（１）<br>
 <input type="radio" name="answer11" value="（２）">（２）<br>
 <input type="radio" name="answer11" value="（３）">（３）<br>
@@ -109,8 +109,8 @@
 <input type="radio" name="answer11" value="（５）">（５）<br>
 </p>
 
-<p><b>(12) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）つける際には（２）緊急性の（３）業務の優先順位を（４）両面から判断する（５）個々の業務の重要性と<br>
+<p><b>(12)－24 , －28 , －32 , □ , －40</b><br>
+（１）－34（２）－ 35（３）－ 83（４）－ 36（５）－ 28<br>
 <input type="radio" name="answer12" value="（１）">（１）<br>
 <input type="radio" name="answer12" value="（２）">（２）<br>
 <input type="radio" name="answer12" value="（３）">（３）<br>
@@ -118,8 +118,8 @@
 <input type="radio" name="answer12" value="（５）">（５）<br>
 </p>
 
-<p><b>(13) 並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）早計である（２）ものごとの（３）全体を判断する（４）一部だけを見て（５）のはいかにも<br>
+<p><b>(13) － 67 , □ , －71 , －73 , －75</b><br>
+（１）－ 65（２）－ 69（３）－70（４）－ 73（５）－ 68<br>
 <input type="radio" name="answer13" value="（１）">（１）<br>
 <input type="radio" name="answer13" value="（２）">（２）<br>
 <input type="radio" name="answer13" value="（３）">（３）<br>
@@ -127,8 +127,8 @@
 <input type="radio" name="answer13" value="（５）">（５）<br>
 </p>
 
-<p><b>(14) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）何が（２）到来で（３）どう変化するのか（４）誰もわからない（５）人口減少社会の<br>
+<p><b>(14) 99 , 106 , 113 , □ , 127</b><br>
+（１）120（２）118（３）119（４）117（５）124<br>
 <input type="radio" name="answer14" value="（１）">（１）<br>
 <input type="radio" name="answer14" value="（２）">（２）<br>
 <input type="radio" name="answer14" value="（３）">（３）<br>
@@ -136,8 +136,8 @@
 <input type="radio" name="answer14" value="（５）">（５）<br>
 </p>
 
-<p><b>(15)並べ替えたときに5番目になる選択肢を解答してください。</b><br>
-（１）店で見つけた（２）前から欲しい（３）商品を（４）と思っていた（５）自宅の近くにある<br>
+<p><b>(15)－93 , □, －83, －78 , －73</b><br>
+（１）－ 90（２）－91（３）－ 85（４）－ 88（５）－87<br>
 <input type="radio" name="answer15" value="（１）">（１）<br>
 <input type="radio" name="answer15" value="（２）">（２）<br>
 <input type="radio" name="answer15" value="（３）">（３）<br>
@@ -145,8 +145,8 @@
 <input type="radio" name="answer15" value="（５）">（５）<br>
 </p>
 
-<p><b>(16) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）お寺に（２）山の中腹にある（３）休憩をとらずに（４）頂上を目指した（５）参拝した後<br>
+<p><b>(16)□ , － 83 , －88 , －93 , －98</b><br>
+（１）－75（２）－ 80（３）－79（４）－70（５）－ 78<br>
 <input type="radio" name="answer16" value="（１）">（１）<br>
 <input type="radio" name="answer16" value="（２）">（２）<br>
 <input type="radio" name="answer16" value="（３）">（３）<br>
@@ -154,8 +154,8 @@
 <input type="radio" name="answer16" value="（５）">（５）<br>
 </p>
 
-<p><b>(17) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）落とし物の大半が（２）誠実な国である（３）持ち主に（４）日本は（５）返ってくるような<br>
+<p><b>(17) 32 , 25 , 18 , □ , 4</b><br>
+（１）8（２）13（３）7（４）11（５）9<br>
 <input type="radio" name="answer17" value="（１）">（１）<br>
 <input type="radio" name="answer17" value="（２）">（２）<br>
 <input type="radio" name="answer17" value="（３）">（３）<br>
@@ -163,8 +163,8 @@
 <input type="radio" name="answer17" value="（５）">（５）<br>
 </p>
 
-<p><b>(18)並べ替えたときに4番目になる選択肢を解答してください</b><br>
-（１）梱包の仕方に（２） 引っ越しの際には （３）大きく変わってくる（４）作業の効率は（５）気をつけるだけで<br>
+<p><b>(18) 43 , 36 , □ , 22 , 15</b><br>
+（１）25（２）30（３）27（４）28（５）29<br>
 <input type="radio" name="answer18" value="（１）">（１）<br>
 <input type="radio" name="answer18" value="（２）">（２）<br>
 <input type="radio" name="answer18" value="（３）">（３）<br>
@@ -172,8 +172,8 @@
 <input type="radio" name="answer18" value="（５）">（５）<br>
 </p>
 
-<p><b>(19) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）食料を（２）が望ましい（３）自宅に何日分かの（４） 備蓄しておくこと （５）水や<br>
+<p><b>(19)－97 , －103 , －109 , －115 , □</b><br>
+（１）－119（２）－ 133（３）－ 127（４）－123（５）－121<br>
 <input type="radio" name="answer19" value="（１）">（１）<br>
 <input type="radio" name="answer19" value="（２）">（２）<br>
 <input type="radio" name="answer19" value="（３）">（３）<br>
@@ -181,8 +181,8 @@
 <input type="radio" name="answer19" value="（５）">（５）<br>
 </p>
 
-<p><b>(20) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）泣くから（２）先人がいた（３）感情に先立つとして（４）悲しくなると考えた（５）身体の反応は<br>
+<p><b>(20) □ , 66 , 74 , 82 , 90</b><br>
+（１）55（２）48（３）49（４）58（５）60<br>
 <input type="radio" name="answer20" value="（１）">（１）<br>
 <input type="radio" name="answer20" value="（２）">（２）<br>
 <input type="radio" name="answer20" value="（３）">（３）<br>
@@ -190,8 +190,8 @@
 <input type="radio" name="answer20" value="（５）">（５）<br>
 </p>
 
-<p><b>(21) 並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）あまりに（２）協調性を（３）個性が（４）失われることもある（５）重んじようとする<br>
+<p><b>(21)－61 , □ , －73 , －79 ,－85</b><br>
+（１）－ 63（２）－64（３）－ 65（４）ー60（５）－ 67<br>
 <input type="radio" name="answer21" value="（１）">（１）<br>
 <input type="radio" name="answer21" value="（２）">（２）<br>
 <input type="radio" name="answer21" value="（３）">（３）<br>
@@ -199,8 +199,8 @@
 <input type="radio" name="answer21" value="（５）">（５）<br>
 </p>
 
-<p><b>(22) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）とも呼ばれている（２）医薬品のことで（３）後発品（４）ジェネリック医薬品は（５）成分の特許の切れた<br>
+<p><b>(22) －19 , □ , －31 , －37 , －43</b><br>
+（１）－22（２）－ 23（３）－ 30（４）－ 25（５）－ 27<br>
 <input type="radio" name="answer22" value="（１）">（１）<br>
 <input type="radio" name="answer22" value="（２）">（２）<br>
 <input type="radio" name="answer22" value="（３）">（３）<br>
@@ -208,8 +208,8 @@
 <input type="radio" name="answer22" value="（５）">（５）<br>
 </p>
 
-<p><b>(23) 並べ替えたときに3番目になる選択肢を解答してください。</b><br>
-（１）その人がどんな状況に（２）相手に何かを（３）あるのかを（４）確認するのが基本だ（５）依頼する時には<br>
+<p><b>(23)－81 , －89 , □ , －105 , －113</b><br>
+（１）－97（２）－95（３）－93（４）－90（５）－103<br>
 <input type="radio" name="answer23" value="（１）">（１）<br>
 <input type="radio" name="answer23" value="（２）">（２）<br>
 <input type="radio" name="answer23" value="（３）">（３）<br>
@@ -217,8 +217,8 @@
 <input type="radio" name="answer23" value="（５）">（５）<br>
 </p>
 
-<p><b>(24) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）結局普段使うのは（２）のはよいが（３）そのうちの一部だ（４）スマートフォンは（５）様々なアプリを入れられる<br>
+<p><b>(24)－12 , 4 ,－12 , 4 , □</b><br>
+（１）－8（２）10（３）－4（４）－ 12（５）12<br>
 <input type="radio" name="answer24" value="（１）">（１）<br>
 <input type="radio" name="answer24" value="（２）">（２）<br>
 <input type="radio" name="answer24" value="（３）">（３）<br>
@@ -226,8 +226,8 @@
 <input type="radio" name="answer24" value="（５）">（５）<br>
 </p>
 
-<p><b>(25)並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）電話に対しては（２）に早急に対応すべきだ（３）お客様からの（４）問い合わせ（５）たらい回しをせず<br>
+<p><b>(25) 1 , 2 , □ , 2 , 1</b><br>
+（１）4（２）2（３）1（４）－1（５）－2<br>
 <input type="radio" name="answer25" value="（１）">（１）<br>
 <input type="radio" name="answer25" value="（２）">（２）<br>
 <input type="radio" name="answer25" value="（３）">（３）<br>
@@ -235,8 +235,8 @@
 <input type="radio" name="answer25" value="（５）">（５）<br>
 </p>
 
-<p><b>(26) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）電気を（２）節約するためにまず（３）使っているかを把握した（４）何にどれくらい（５）電気代を<br>
+<p><b>(26) － 13 , 5 , □ , 5 , －13</b><br>
+（１）1（２）5（３）0（４）－7（５）－ 13<br>
 <input type="radio" name="answer26" value="（１）">（１）<br>
 <input type="radio" name="answer26" value="（２）">（２）<br>
 <input type="radio" name="answer26" value="（３）">（３）<br>
@@ -244,8 +244,8 @@
 <input type="radio" name="answer26" value="（５）">（５）<br>
 </p>
 
-<p><b>(27) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）にすぎない（２）持っていても（３）のはそのうちの一部 （４）複数のクレジットカードを（５）普段よく使う<br>
+<p><b>(27)□ , －10 , －18 , －34 , －66</b><br>
+（１）2（２）－2（３）4（４）0（５）－6<br>
 <input type="radio" name="answer27" value="（１）">（１）<br>
 <input type="radio" name="answer27" value="（２）">（２）<br>
 <input type="radio" name="answer27" value="（３）">（３）<br>
@@ -253,8 +253,8 @@
 <input type="radio" name="answer27" value="（５）">（５）<br>
 </p>
 
-<p><b>(28) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）議論は進まない（２）意見の対立は（３）ばかりでも（４）望ましいものではないが（５）対立を避けて<br>
+<p><b>(28)□ , 22 , 54 , 118 , 246</b><br>
+（１）10（２）20（３）15（４）6（５）4<br>
 <input type="radio" name="answer28" value="（１）">（１）<br>
 <input type="radio" name="answer28" value="（２）">（２）<br>
 <input type="radio" name="answer28" value="（３）">（３）<br>
@@ -262,8 +262,8 @@
 <input type="radio" name="answer28" value="（５）">（５）<br>
 </p>
 
-<p><b>(29) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）解答していた（２）質問をされても（３）のには感心した（４）どんな内容の（５）その講師が的確に<br>
+<p><b>(29)－4 , －6 , －10 , －18 , □</b><br>
+（１）－19（２）－ 24（３）－28（４）－ 30（５）－ 34<br>
 <input type="radio" name="answer29" value="（１）">（１）<br>
 <input type="radio" name="answer29" value="（２）">（２）<br>
 <input type="radio" name="answer29" value="（３）">（３）<br>
@@ -271,8 +271,8 @@
 <input type="radio" name="answer29" value="（５）">（５）<br>
 </p>
 
-<p><b>(30) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）今よりもっと（２）しなければならない（３）早く就寝（４）したいのなら（５）もし早起きを<br>
+<p><b>(30)－1 , 7 , －9 , □ , －41</b><br>
+（１）32（２）18（３）11（４） 23（５）27<br>
 <input type="radio" name="answer30" value="（１）">（１）<br>
 <input type="radio" name="answer30" value="（２）">（２）<br>
 <input type="radio" name="answer30" value="（３）">（３）<br>
@@ -280,8 +280,8 @@
 <input type="radio" name="answer30" value="（５）">（５）<br>
 </p>
 
-<p><b>(31) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）聴衆を（２）優秀な指揮者に率いられた（３）魅了した（４）オーケストラは（５）見事なアンサンブルを奏でて<br>
+<p><b>(31) 11 , － 15 , 37 , □ , 141</b><br>
+（１）65（２）－55（３）－67（４）－45（５）57<br>
 <input type="radio" name="answer31" value="（１）">（１）<br>
 <input type="radio" name="answer31" value="（２）">（２）<br>
 <input type="radio" name="answer31" value="（３）">（３）<br>
@@ -289,8 +289,8 @@
 <input type="radio" name="answer31" value="（５）">（５）<br>
 </p>
 
-<p><b>(32) 並べ替えたときに3番目になる選択肢を解答してください。</b><br>
-（１）そうでない資格（２）もっているだけで（３）もある（４）就職に有利な資格（５）もあれば<br>
+<p><b>(32) －3 , 13 , － 19 , □ , － 83</b><br>
+（１）45（２）－ 48（３）－ 60（４）－ 57（５）－35<br>
 <input type="radio" name="answer32" value="（１）">（１）<br>
 <input type="radio" name="answer32" value="（２）">（２）<br>
 <input type="radio" name="answer32" value="（３）">（３）<br>
@@ -298,8 +298,8 @@
 <input type="radio" name="answer32" value="（５）">（５）<br>
 </p>
 
-<p><b>(33) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）ファンの間（２）不調の主力選手を（３）批判する声が（４）から続出している（５）使い続ける監督を<br>
+<p><b>(33) □ , －24 , － 56 , －120 , －248</b><br>
+（１）0（２）4（３）－ 8（４）－ 10（５）－ 18<br>
 <input type="radio" name="answer33" value="（１）">（１）<br>
 <input type="radio" name="answer33" value="（２）">（２）<br>
 <input type="radio" name="answer33" value="（３）">（３）<br>
@@ -307,8 +307,8 @@
 <input type="radio" name="answer33" value="（５）">（５）<br>
 </p>
 
-<p><b>(34) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）走るようでは（２）私利私欲に（３）手にしても（４）長続きしない（５）権力を<br>
+<p><b>(34) 5 , 9 , 17 , □ , 65</b><br>
+（１）33（２）21（３）35（４）48（５）53<br>
 <input type="radio" name="answer34" value="（１）">（１）<br>
 <input type="radio" name="answer34" value="（２）">（２）<br>
 <input type="radio" name="answer34" value="（３）">（３）<br>
@@ -316,8 +316,8 @@
 <input type="radio" name="answer34" value="（５）">（５）<br>
 </p>
 
-<p><b>(35) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）過去の（２）大きな問題は見られない（３）売上データを（４）この商品に（５）見る限りでは<br>
+<p><b>(35) － 11 , －23 , － 47 , － 95 , □</b><br>
+（１）－ 191（２）－ 180 （３）－ 150（４）－ 99（５）－ 129<br>
 <input type="radio" name="answer35" value="（１）">（１）<br>
 <input type="radio" name="answer35" value="（２）">（２）<br>
 <input type="radio" name="answer35" value="（３）">（３）<br>
@@ -325,8 +325,8 @@
 <input type="radio" name="answer35" value="（５）">（５）<br>
 </p>
 
-<p><b>(36) 並べ替えたときに3番目になる選択肢を解答してください。</b><br>
-（１）効率向上（２）オフィスの環境を（３）にもつながる（４）整備することが（５）業務の<br>
+<p><b>(36) －7 , 13 , □ , 53 , － 107</b><br>
+（１）－37（２）－ 27（３）－ 50（４）－ 24（５）36<br>
 <input type="radio" name="answer36" value="（１）">（１）<br>
 <input type="radio" name="answer36" value="（２）">（２）<br>
 <input type="radio" name="answer36" value="（３）">（３）<br>
@@ -334,8 +334,8 @@
 <input type="radio" name="answer36" value="（５）">（５）<br>
 </p>
 
-<p><b>(37) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）基本的な技術が（２）応用的な手法も（３）すぐに修得することができる（４）彼は（５）身に付いているから<br>
+<p><b>(37) 3 , －3 , 3 , □ , 3</b><br>
+（１）4（２）－3（３）－6（４）2 . 5（５）－ 1. 5<br>
 <input type="radio" name="answer37" value="（１）">（１）<br>
 <input type="radio" name="answer37" value="（２）">（２）<br>
 <input type="radio" name="answer37" value="（３）">（３）<br>
@@ -343,8 +343,8 @@
 <input type="radio" name="answer37" value="（５）">（５）<br>
 </p>
 
-<p><b>(38) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）あれば夢を（２）弛まぬ努力が（３）ことができる（４）叶える（４）たとえ貧しくとも<br>
+<p><b>(38) 3 , －9 , 15 , － 33 , □</b><br>
+（１）81（２）－71（３）63（４）－ 55 （５）49<br>
 <input type="radio" name="answer38" value="（１）">（１）<br>
 <input type="radio" name="answer38" value="（２）">（２）<br>
 <input type="radio" name="answer38" value="（３）">（３）<br>
@@ -352,8 +352,8 @@
 <input type="radio" name="answer38" value="（５）">（５）<br>
 </p>
 
-<p><b>(39) 並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）任せる際には（２）することが必要だ（３）高める工夫を（４）部下に仕事を（５）部下のモチベーションを<br>
+<p><b>(39) 1 , □ , 7 , －17 , 31</b><br>
+（１）－3（２）－2（３）－ 5（４）－7（５）4<br>
 <input type="radio" name="answer39" value="（１）">（１）<br>
 <input type="radio" name="answer39" value="（２）">（２）<br>
 <input type="radio" name="answer39" value="（３）">（３）<br>
@@ -361,8 +361,8 @@
 <input type="radio" name="answer39" value="（５）">（５）<br>
 </p>
 
-<p><b>(40) 並べ替えたときに3番目になる選択肢を解答してください。</b><br>
-（１）俳優が多数出演（２）どれも似たような（３）役柄で面白みに欠ける（４）あのドラマには有名な（５）している割には<br>
+<p><b>(40) 1 , － 10 , 100 , □ , 10000</b><br>
+（１）1000（２）－ 500（３）－1000（４）750（５）－ 2500<br>
 <input type="radio" name="answer40" value="（１）">（１）<br>
 <input type="radio" name="answer40" value="（２）">（２）<br>
 <input type="radio" name="answer40" value="（３）">（３）<br>
@@ -371,9 +371,9 @@
 </p>
 
 <br>
-<p><b>これでテスト1は終わりです。</b></p><br>
+<p><b>これでテスト4は終わりです。</b></p><br>
 
-<button type="submit" name="action" value="Test1_submit">送信</button>
+<button type="submit" name="action" value="Test4_submit">送信</button>
 </form>
 </body>
 </html>

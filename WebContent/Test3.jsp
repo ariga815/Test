@@ -4,14 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>適正テスト１</title>
+<title>適正テスト３</title>
 </head>
 <body>
-<h1>テスト１ ＜解答時間５分＞</h1>
+<h1>テスト３ ＜解答時間５分＞</h1>
 
 <form action="ActionServlet" method="post">
-<p><b>(1)並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）今日になって（２）全身が（３）テニスをしたら （４） 筋肉痛になった（５） 昨日久しぶりに<br>
+<p><b>(1) 電話：受話器 ＝□：ペダル</b><br>
+（１）自転車（２）ボート（３）スキー（４）ダイヤル （５）呼び鈴<br>
 <input type="radio" name="answer1" value="（１）">（１）<br>
 <input type="radio" name="answer1" value="（２）">（２）<br>
 <input type="radio" name="answer1" value="（３）">（３）<br>
@@ -19,8 +19,8 @@
 <input type="radio" name="answer1" value="（５）">（５）<br>
 </p>
 
-<p><b>(2) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）お買い得だ（２）新機能がついた（３）よくなったので（４）上にデザインも（５）先月発売された新商品は<br>
+<p><b>(2) □：風 ＝水道：水</b><br>
+（１）光（２）氷（３）ホコリ（４）夏（５）扇風機<br>
 <input type="radio" name="answer2" value="（１）">（１）<br>
 <input type="radio" name="answer2" value="（２）">（２）<br>
 <input type="radio" name="answer2" value="（３）">（３）<br>
@@ -28,8 +28,8 @@
 <input type="radio" name="answer2" value="（５）">（５）<br>
 </p>
 
-<p><b>(3) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）知人と会うと（２）話を聞かされる（３）いつも（４）最近観た映画の（５）映画好きの<br>
+<p><b>(3)□：長袖 ＝熟考：浅慮</b><br>
+（１）ズボン（２）制服（３）手袋（４）半袖（５）裸<br>
 <input type="radio" name="answer3" value="（１）">（１）<br>
 <input type="radio" name="answer3" value="（２）">（２）<br>
 <input type="radio" name="answer3" value="（３）">（３）<br>
@@ -37,8 +37,8 @@
 <input type="radio" name="answer3" value="（５）">（５）<br>
 </p>
 
-<p><b>(4)並べ替えたときに３番目になる選択肢を解答してください。</b><br>
-（１）学生時代からの（２）身が入らないのは（３）悪い癖だ（４）締め切り直前にならないと（５）仕事に<br>
+<p><b>(4) ストーブ：クーラー＝□：子供</b><br>
+（１）空調（２）成人（３）リモコン（４）安全（５）小型<br>
 <input type="radio" name="answer4" value="（１）">（１）<br>
 <input type="radio" name="answer4" value="（２）">（２）<br>
 <input type="radio" name="answer4" value="（３）">（３）<br>
@@ -46,8 +46,8 @@
 <input type="radio" name="answer4" value="（５）">（５）<br>
 </p>
 
-<p><b>(5) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）と評判だから（２）並ぶことになっても（３）あのお店はおいしい （４）少しも苦にならない（５）少々の行列なら<br>
+<p><b>(5) □：音楽 ＝ゴッホ：絵画</b><br>
+（１）ピカソ（２）モーツアルト（３）ユング（４）トッカータ（５）ト音記号<br>
 <input type="radio" name="answer5" value="（１）">（１）<br>
 <input type="radio" name="answer5" value="（２）">（２）<br>
 <input type="radio" name="answer5" value="（３）">（３）<br>
@@ -55,8 +55,8 @@
 <input type="radio" name="answer5" value="（５）">（５）<br>
 </p>
 
-<p><b>(6) 並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）が発生する（２）トンネルの入り口（３）があると渋滞（４）速度を落とす車（５）で圧迫感から一時的に<br>
+<p><b>(6) □：聴診器 ＝美容師：はさみ</b><br>
+（１）メス（２）くし（３）診療（４）技師（５）医者<br>
 <input type="radio" name="answer6" value="（１）">（１）<br>
 <input type="radio" name="answer6" value="（２）">（２）<br>
 <input type="radio" name="answer6" value="（３）">（３）<br>
@@ -64,8 +64,8 @@
 <input type="radio" name="answer6" value="（５）">（５）<br>
 </p>
 
-<p><b>(7) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１） 気持ちよく会議室を（２）利用できるように（３）ほかの人が（４）守ってほしい（５）マナーを<br>
+<p><b>(7) 上司：□＝師匠：弟子</b><br>
+（１）同僚（２）子弟 （３）先輩（４）後輩（５）部下<br>
 <input type="radio" name="answer7" value="（１）">（１）<br>
 <input type="radio" name="answer7" value="（２）">（２）<br>
 <input type="radio" name="answer7" value="（３）">（３）<br>
@@ -73,8 +73,8 @@
 <input type="radio" name="answer7" value="（５）">（５）<br>
 </p>
 
-<p><b>(8)並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）身につける前に（２）明確にすべきだ（３）テクニックを（４）具体的な就職活動の（５）自分は何がしたいのかを<br>
+<p><b>(8) 紅：朱＝蒼：□</b><br>
+（１）藍（２）丹（３）鈍（３）黄（４）紫（５）鈍<br>
 <input type="radio" name="answer8" value="（１）">（１）<br>
 <input type="radio" name="answer8" value="（２）">（２）<br>
 <input type="radio" name="answer8" value="（３）">（３）<br>
@@ -82,8 +82,8 @@
 <input type="radio" name="answer8" value="（５）">（５）<br>
 </p>
 
-<p><b>(9)並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）山頂に登ったときの（２）爽快感（３）登山中は辛いが（４）達成感や（５）は何事にも代え難い<br>
+<p><b>(9)自動車：□＝定規：測定</b><br>
+（１）自転車（２）整備（３）移動（４）工場（５）測量<br>
 <input type="radio" name="answer9" value="（１）">（１）<br>
 <input type="radio" name="answer9" value="（２）">（２）<br>
 <input type="radio" name="answer9" value="（３）">（３）<br>
@@ -91,8 +91,8 @@
 <input type="radio" name="answer9" value="（５）">（５）<br>
 </p>
 
-<p><b>(10) 並べ替えたときに5番目になる選択肢を解答してください。</b><br>
-（１）話してしまう（２） 持たせる方が （３） 露骨に全てを（４）いいこともある（５）より含みを<br>
+<p><b>(10) 学校：校舍 ＝□：官舍</b><br>
+（１）病院（２）大学（３）会議室（４）市役所（５）会社<br>
 <input type="radio" name="answer10" value="（１）">（１）<br>
 <input type="radio" name="answer10" value="（２）">（２）<br>
 <input type="radio" name="answer10" value="（３）">（３）<br>
@@ -100,8 +100,8 @@
 <input type="radio" name="answer10" value="（５）">（５）<br>
 </p>
 
-<p><b>(11) 並べ替えたときに3番目になる選択肢を解答してください。</b><br>
-（１）成功しようとすると（２）身のほどを（３）人の真似をして（４）失敗する（５）知らずに<br>
+<p><b>(11)廊下：家＝本棚：□</b><br>
+（１）下駄箱（２）書籍（３）図書館（４）国立（５）消防署<br>
 <input type="radio" name="answer11" value="（１）">（１）<br>
 <input type="radio" name="answer11" value="（２）">（２）<br>
 <input type="radio" name="answer11" value="（３）">（３）<br>
@@ -109,8 +109,8 @@
 <input type="radio" name="answer11" value="（５）">（５）<br>
 </p>
 
-<p><b>(12) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）つける際には（２）緊急性の（３）業務の優先順位を（４）両面から判断する（５）個々の業務の重要性と<br>
+<p><b>(12)病気：□＝家具：机</b><br>
+（１）体調（２）精神（３）ウイルス（４）感染（５）風邪<br>
 <input type="radio" name="answer12" value="（１）">（１）<br>
 <input type="radio" name="answer12" value="（２）">（２）<br>
 <input type="radio" name="answer12" value="（３）">（３）<br>
@@ -118,8 +118,8 @@
 <input type="radio" name="answer12" value="（５）">（５）<br>
 </p>
 
-<p><b>(13) 並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）早計である（２）ものごとの（３）全体を判断する（４）一部だけを見て（５）のはいかにも<br>
+<p><b>(13) 猫：□＝馬：念仏</b><br>
+（１）イヌ（２）手（３）無用（４）招き猫（５）小判<br>
 <input type="radio" name="answer13" value="（１）">（１）<br>
 <input type="radio" name="answer13" value="（２）">（２）<br>
 <input type="radio" name="answer13" value="（３）">（３）<br>
@@ -127,8 +127,8 @@
 <input type="radio" name="answer13" value="（５）">（５）<br>
 </p>
 
-<p><b>(14) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）何が（２）到来で（３）どう変化するのか（４）誰もわからない（５）人口減少社会の<br>
+<p><b>(14) □：窓 ＝木材：割りばし</b><br>
+（１）家屋 （２）扉（３）ガラス（４）防犯（５）鍵<br>
 <input type="radio" name="answer14" value="（１）">（１）<br>
 <input type="radio" name="answer14" value="（２）">（２）<br>
 <input type="radio" name="answer14" value="（３）">（３）<br>
@@ -136,8 +136,8 @@
 <input type="radio" name="answer14" value="（５）">（５）<br>
 </p>
 
-<p><b>(15)並べ替えたときに5番目になる選択肢を解答してください。</b><br>
-（１）店で見つけた（２）前から欲しい（３）商品を（４）と思っていた（５）自宅の近くにある<br>
+<p><b>(15) □：書道 ＝茶碗：茶道</b><br>
+（１）ひしゃく（２）竹刀（３）墨汁（４）花瓶（５）花器<br>
 <input type="radio" name="answer15" value="（１）">（１）<br>
 <input type="radio" name="answer15" value="（２）">（２）<br>
 <input type="radio" name="answer15" value="（３）">（３）<br>
@@ -145,8 +145,8 @@
 <input type="radio" name="answer15" value="（５）">（５）<br>
 </p>
 
-<p><b>(16) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）お寺に（２）山の中腹にある（３）休憩をとらずに（４）頂上を目指した（５）参拝した後<br>
+<p><b>(16) 雑誌：□＝酒：ウイスキー</b><br>
+（１）文庫（２）專門書（３）新聞（４）書物（５）週刊誌<br>
 <input type="radio" name="answer16" value="（１）">（１）<br>
 <input type="radio" name="answer16" value="（２）">（２）<br>
 <input type="radio" name="answer16" value="（３）">（３）<br>
@@ -154,8 +154,8 @@
 <input type="radio" name="answer16" value="（５）">（５）<br>
 </p>
 
-<p><b>(17) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）落とし物の大半が（２）誠実な国である（３）持ち主に（４）日本は（５）返ってくるような<br>
+<p><b>(17) フォーク：□＝ボールペン：鉛筆</b><br>
+（１）スプーン（２）食器（３）金属（４）筆（５）マナー<br>
 <input type="radio" name="answer17" value="（１）">（１）<br>
 <input type="radio" name="answer17" value="（２）">（２）<br>
 <input type="radio" name="answer17" value="（３）">（３）<br>
@@ -163,8 +163,8 @@
 <input type="radio" name="answer17" value="（５）">（５）<br>
 </p>
 
-<p><b>(18)並べ替えたときに4番目になる選択肢を解答してください</b><br>
-（１）梱包の仕方に（２） 引っ越しの際には （３）大きく変わってくる（４）作業の効率は（５）気をつけるだけで<br>
+<p><b>(18)塾：勉強 ＝レストラン：□</b><br>
+（１）自習（２）コック（３）食事（４）ウェイトレス（５）チェーン店<br>
 <input type="radio" name="answer18" value="（１）">（１）<br>
 <input type="radio" name="answer18" value="（２）">（２）<br>
 <input type="radio" name="answer18" value="（３）">（３）<br>
@@ -172,8 +172,8 @@
 <input type="radio" name="answer18" value="（５）">（５）<br>
 </p>
 
-<p><b>(19) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）食料を（２）が望ましい（３）自宅に何日分かの（４） 備蓄しておくこと （５）水や<br>
+<p><b>(19) 花瓶：切り花 ＝虫かご：□</b><br>
+（１）牢屋（２）キュウリ（３）虫取り網（４）生け花（５）スズムシ<br>
 <input type="radio" name="answer19" value="（１）">（１）<br>
 <input type="radio" name="answer19" value="（２）">（２）<br>
 <input type="radio" name="answer19" value="（３）">（３）<br>
@@ -181,8 +181,8 @@
 <input type="radio" name="answer19" value="（５）">（５）<br>
 </p>
 
-<p><b>(20) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）泣くから（２）先人がいた（３）感情に先立つとして（４）悲しくなると考えた（５）身体の反応は<br>
+<p><b>(20)□：穀物 ＝カラス：烏</b><br>
+（１）雑穀（２）宝石（３）魚（４）麦（５）肉<br>
 <input type="radio" name="answer20" value="（１）">（１）<br>
 <input type="radio" name="answer20" value="（２）">（２）<br>
 <input type="radio" name="answer20" value="（３）">（３）<br>
@@ -190,8 +190,8 @@
 <input type="radio" name="answer20" value="（５）">（５）<br>
 </p>
 
-<p><b>(21) 並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）あまりに（２）協調性を（３）個性が（４）失われることもある（５）重んじようとする<br>
+<p><b>(21) □：神社 ＝門：家屋</b><br>
+（１）鳥居（２）ドア（３）寺院（４）神輿（５）賽錢箱<br>
 <input type="radio" name="answer21" value="（１）">（１）<br>
 <input type="radio" name="answer21" value="（２）">（２）<br>
 <input type="radio" name="answer21" value="（３）">（３）<br>
@@ -199,8 +199,8 @@
 <input type="radio" name="answer21" value="（５）">（５）<br>
 </p>
 
-<p><b>(22) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）とも呼ばれている（２）医薬品のことで（３）後発品（４）ジェネリック医薬品は（５）成分の特許の切れた<br>
+<p><b>(22)橋：□＝陸橋：道路</b><br>
+（１）川（２）鉄橋（３）堤防（４）海（５）山<br>
 <input type="radio" name="answer22" value="（１）">（１）<br>
 <input type="radio" name="answer22" value="（２）">（２）<br>
 <input type="radio" name="answer22" value="（３）">（３）<br>
@@ -208,8 +208,8 @@
 <input type="radio" name="answer22" value="（５）">（５）<br>
 </p>
 
-<p><b>(23) 並べ替えたときに3番目になる選択肢を解答してください。</b><br>
-（１）その人がどんな状況に（２）相手に何かを（３）あるのかを（４）確認するのが基本だ（５）依頼する時には<br>
+<p><b>(23)ブックエンド：本＝クリップ：□</b><br>
+（１）書類（２）しおり（３）押しピン（４）山積み（５）ホッチキス<br>
 <input type="radio" name="answer23" value="（１）">（１）<br>
 <input type="radio" name="answer23" value="（２）">（２）<br>
 <input type="radio" name="answer23" value="（３）">（３）<br>
@@ -217,8 +217,8 @@
 <input type="radio" name="answer23" value="（５）">（５）<br>
 </p>
 
-<p><b>(24) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）結局普段使うのは（２）のはよいが（３）そのうちの一部だ（４）スマートフォンは（５）様々なアプリを入れられる<br>
+<p><b>(24)サファイア：□＝金：貴金属</b><br>
+（１）ルビー（２）青（３）宝石（４）硬度（５）裝飾品<br>
 <input type="radio" name="answer24" value="（１）">（１）<br>
 <input type="radio" name="answer24" value="（２）">（２）<br>
 <input type="radio" name="answer24" value="（３）">（３）<br>
@@ -226,8 +226,8 @@
 <input type="radio" name="answer24" value="（５）">（５）<br>
 </p>
 
-<p><b>(25)並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）電話に対しては（２）に早急に対応すべきだ（３）お客様からの（４）問い合わせ（５）たらい回しをせず<br>
+<p><b>(25)学校：教育＝□：行政</b><br>
+（１）裁判所（２）小児科（３）教育委員会（４）司法（５）市役所<br>
 <input type="radio" name="answer25" value="（１）">（１）<br>
 <input type="radio" name="answer25" value="（２）">（２）<br>
 <input type="radio" name="answer25" value="（３）">（３）<br>
@@ -235,8 +235,8 @@
 <input type="radio" name="answer25" value="（５）">（５）<br>
 </p>
 
-<p><b>(26) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）電気を（２）節約するためにまず（３）使っているかを把握した（４）何にどれくらい（５）電気代を<br>
+<p><b>(26)電信柱：送電線 ＝□：針</b><br>
+（１）時計（２）雨（３）放電（４）台風（５）釣り<br>
 <input type="radio" name="answer26" value="（１）">（１）<br>
 <input type="radio" name="answer26" value="（２）">（２）<br>
 <input type="radio" name="answer26" value="（３）">（３）<br>
@@ -244,8 +244,8 @@
 <input type="radio" name="answer26" value="（５）">（５）<br>
 </p>
 
-<p><b>(27) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）にすぎない（２）持っていても（３）のはそのうちの一部 （４）複数のクレジットカードを（５）普段よく使う<br>
+<p><b>(27) 飛行機：操縱 ＝船：□</b><br>
+（１）操舵（２）運転（３）乗船（４）免許（５）車両<br>
 <input type="radio" name="answer27" value="（１）">（１）<br>
 <input type="radio" name="answer27" value="（２）">（２）<br>
 <input type="radio" name="answer27" value="（３）">（３）<br>
@@ -253,8 +253,8 @@
 <input type="radio" name="answer27" value="（５）">（５）<br>
 </p>
 
-<p><b>(28) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）議論は進まない（２）意見の対立は（３）ばかりでも（４）望ましいものではないが（５）対立を避けて<br>
+<p><b>(28)台風：低気圧＝□：前線</b><br>
+（１）夏（２）豪雨（３）天気予報（４）梅雨（５）木枯らし<br>
 <input type="radio" name="answer28" value="（１）">（１）<br>
 <input type="radio" name="answer28" value="（２）">（２）<br>
 <input type="radio" name="answer28" value="（３）">（３）<br>
@@ -262,8 +262,8 @@
 <input type="radio" name="answer28" value="（５）">（５）<br>
 </p>
 
-<p><b>(29) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）解答していた（２）質問をされても（３）のには感心した（４）どんな内容の（５）その講師が的確に<br>
+<p><b>(29) 梅雨：かさ ＝□：手袋</b><br>
+（１）冬（２）雨合羽（３）雪（４）自動車（５）毛糸<br>
 <input type="radio" name="answer29" value="（１）">（１）<br>
 <input type="radio" name="answer29" value="（２）">（２）<br>
 <input type="radio" name="answer29" value="（３）">（３）<br>
@@ -271,8 +271,8 @@
 <input type="radio" name="answer29" value="（５）">（５）<br>
 </p>
 
-<p><b>(30) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）今よりもっと（２）しなければならない（３）早く就寝（４）したいのなら（５）もし早起きを<br>
+<p><b>(30)せんべい：クッキー＝煎茶：□</b><br>
+（１）緑茶（２）休憩（３）お茶請け（４）茶葉（５）紅茶<br>
 <input type="radio" name="answer30" value="（１）">（１）<br>
 <input type="radio" name="answer30" value="（２）">（２）<br>
 <input type="radio" name="answer30" value="（３）">（３）<br>
@@ -280,8 +280,8 @@
 <input type="radio" name="answer30" value="（５）">（５）<br>
 </p>
 
-<p><b>(31) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）聴衆を（２）優秀な指揮者に率いられた（３）魅了した（４）オーケストラは（５）見事なアンサンブルを奏でて<br>
+<p><b>(31) □：農業 ＝森林：林業</b><br>
+（１）山岳（２）漁業（３）田畑（４）海洋（５）田植え<br>
 <input type="radio" name="answer31" value="（１）">（１）<br>
 <input type="radio" name="answer31" value="（２）">（２）<br>
 <input type="radio" name="answer31" value="（３）">（３）<br>
@@ -289,8 +289,8 @@
 <input type="radio" name="answer31" value="（５）">（５）<br>
 </p>
 
-<p><b>(32) 並べ替えたときに3番目になる選択肢を解答してください。</b><br>
-（１）そうでない資格（２）もっているだけで（３）もある（４）就職に有利な資格（５）もあれば<br>
+<p><b>(32)令息：愚息＝□：弊社</b><br>
+（１）令孃（２）社長（３）貴社（４）大企業（５）蒙昧<br>
 <input type="radio" name="answer32" value="（１）">（１）<br>
 <input type="radio" name="answer32" value="（２）">（２）<br>
 <input type="radio" name="answer32" value="（３）">（３）<br>
@@ -298,8 +298,8 @@
 <input type="radio" name="answer32" value="（５）">（５）<br>
 </p>
 
-<p><b>(33) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）ファンの間（２）不調の主力選手を（３）批判する声が（４）から続出している（５）使い続ける監督を<br>
+<p><b>(33) タンス：衣類 ＝ゴミ箱：□</b><br>
+（１）分別（２）ゴミ（３）衣替え（４）虫干し（５）回収<br>
 <input type="radio" name="answer33" value="（１）">（１）<br>
 <input type="radio" name="answer33" value="（２）">（２）<br>
 <input type="radio" name="answer33" value="（３）">（３）<br>
@@ -307,8 +307,8 @@
 <input type="radio" name="answer33" value="（５）">（５）<br>
 </p>
 
-<p><b>(34) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）走るようでは（２）私利私欲に（３）手にしても（４）長続きしない（５）権力を<br>
+<p><b>(34)台所：□＝居間：くつろぎ</b><br>
+（１）個室（２）カウンター（３）料理（４）かまど（５）裁縫<br>
 <input type="radio" name="answer34" value="（１）">（１）<br>
 <input type="radio" name="answer34" value="（２）">（２）<br>
 <input type="radio" name="answer34" value="（３）">（３）<br>
@@ -316,8 +316,8 @@
 <input type="radio" name="answer34" value="（５）">（５）<br>
 </p>
 
-<p><b>(35) 並べ替えたときに4番目になる選択肢を解答してください。</b><br>
-（１）過去の（２）大きな問題は見られない（３）売上データを（４）この商品に（５）見る限りでは<br>
+<p><b>(35)砂糖：醤油 ＝しゃもじ：□</b><br>
+（１）ごはん（２）包丁（３）塩（４）味噌（５）さしすせそ<br>
 <input type="radio" name="answer35" value="（１）">（１）<br>
 <input type="radio" name="answer35" value="（２）">（２）<br>
 <input type="radio" name="answer35" value="（３）">（３）<br>
@@ -325,8 +325,8 @@
 <input type="radio" name="answer35" value="（５）">（５）<br>
 </p>
 
-<p><b>(36) 並べ替えたときに3番目になる選択肢を解答してください。</b><br>
-（１）効率向上（２）オフィスの環境を（３）にもつながる（４）整備することが（５）業務の<br>
+<p><b>(36)カメ：□＝カツオ：トビウオ</b><br>
+（１）イオリ（２）ウツボ（３）ペンギン（４）トカゲ（５）コイ<br>
 <input type="radio" name="answer36" value="（１）">（１）<br>
 <input type="radio" name="answer36" value="（２）">（２）<br>
 <input type="radio" name="answer36" value="（３）">（３）<br>
@@ -334,8 +334,8 @@
 <input type="radio" name="answer36" value="（５）">（５）<br>
 </p>
 
-<p><b>(37) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）基本的な技術が（２）応用的な手法も（３）すぐに修得することができる（４）彼は（５）身に付いているから<br>
+<p><b>(37)病気：□＝損傷：修理</b><br>
+（１）けが（２）治癒（３）治療（４）根絶（５）解消<br>
 <input type="radio" name="answer37" value="（１）">（１）<br>
 <input type="radio" name="answer37" value="（２）">（２）<br>
 <input type="radio" name="answer37" value="（３）">（３）<br>
@@ -343,8 +343,8 @@
 <input type="radio" name="answer37" value="（５）">（５）<br>
 </p>
 
-<p><b>(38) 並べ替えたときに2番目になる選択肢を解答してください。</b><br>
-（１）あれば夢を（２）弛まぬ努力が（３）ことができる（４）叶える（４）たとえ貧しくとも<br>
+<p><b>(38)ソファ：椅子＝カーペット：□</b><br>
+（１）床（２）床の間（３）テーブル（４）文机（５）畳<br>
 <input type="radio" name="answer38" value="（１）">（１）<br>
 <input type="radio" name="answer38" value="（２）">（２）<br>
 <input type="radio" name="answer38" value="（３）">（３）<br>
@@ -352,8 +352,8 @@
 <input type="radio" name="answer38" value="（５）">（５）<br>
 </p>
 
-<p><b>(39) 並べ替えたときに1番目になる選択肢を解答してください。</b><br>
-（１）任せる際には（２）することが必要だ（３）高める工夫を（４）部下に仕事を（５）部下のモチベーションを<br>
+<p><b>(39)□：平和 ＝発生：消滅</b><br>
+（１）戦争（２）努力（３）誠実（４）平穏（５）騒音<br>
 <input type="radio" name="answer39" value="（１）">（１）<br>
 <input type="radio" name="answer39" value="（２）">（２）<br>
 <input type="radio" name="answer39" value="（３）">（３）<br>
@@ -361,8 +361,8 @@
 <input type="radio" name="answer39" value="（５）">（５）<br>
 </p>
 
-<p><b>(40) 並べ替えたときに3番目になる選択肢を解答してください。</b><br>
-（１）俳優が多数出演（２）どれも似たような（３）役柄で面白みに欠ける（４）あのドラマには有名な（５）している割には<br>
+<p><b>(40)教会：神父 ＝神社：□</b><br>
+（１）参拝（２）住職（３）神主（４）寺院（５）神殿<br>
 <input type="radio" name="answer40" value="（１）">（１）<br>
 <input type="radio" name="answer40" value="（２）">（２）<br>
 <input type="radio" name="answer40" value="（３）">（３）<br>
@@ -371,9 +371,9 @@
 </p>
 
 <br>
-<p><b>これでテスト1は終わりです。</b></p><br>
+<p><b>これでテスト3は終わりです。</b></p><br>
 
-<button type="submit" name="action" value="Test1_submit">送信</button>
+<button type="submit" name="action" value="Test3_submit">送信</button>
 </form>
 </body>
 </html>
