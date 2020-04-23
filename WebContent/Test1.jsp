@@ -3,10 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<jsp:include page="common.jsp" flush="true" />
 <title>適正テスト１</title>
 </head>
 <body>
+<div class="col-5 ml-3">
+
 <h1>テスト１ ＜解答時間５分＞</h1>
 
 <form action="ActionServlet" method="post">
@@ -375,5 +377,6 @@
 
 <button type="submit" name="action" value="GoToTest2">送信</button>
 </form>
+</div>
 </body>
 </html>

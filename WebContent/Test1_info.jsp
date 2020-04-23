@@ -3,10 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<jsp:include page="common.jsp" flush="true" />
 <title>適正テスト１</title>
 </head>
 <body>
+<div class="col-5 ml-3">
+
 <h1>テスト１ 説明</h1>
 <h2>解答時間 ３分</h2>
 
@@ -52,6 +54,6 @@ if(request.getAttribute("flg").equals("1")){
 <button type="submit" name="action" value="GoToTest1">次のテストへ</button>
 <% } %>
 </form>
-
+</div>
 </body>
 </html>
