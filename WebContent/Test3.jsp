@@ -3,10 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<jsp:include page="common.jsp" flush="true" />
 <title>適正テスト３</title>
 </head>
 <body>
+<div class="container">
+
 <h1>テスト３ ＜解答時間５分＞</h1>
 
 <form action="ActionServlet" method="post">
@@ -373,7 +375,8 @@
 <br>
 <p><b>これでテスト3は終わりです。</b></p><br>
 
-<button type="submit" name="action" value="Test3_submit">送信</button>
+<button type="submit" class="btn btn-success" name="action" value="Test3_submit">送信</button>
 </form>
+</div>
 </body>
 </html>

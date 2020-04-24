@@ -3,10 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<jsp:include page="common.jsp" flush="true" />
 <title>適正テスト４</title>
 </head>
 <body>
+<div class="container">
+
 <h1>テスト４ 説明</h1>
 <h2>解答時間 ３分</h2>
 
@@ -43,14 +45,23 @@
 <input type="radio" name="answer2" value="4">（４）<br>
 <input type="radio" name="answer2" value="5">（５）<br>
 <br>
-<button type="submit" name="action" value="test4_check">解答を確認する</button><br>
-<%
-if(request.getAttribute("flg").equals("1")){
-%>
-<p>正解はそれぞれ⑤と①です。<br></p>
-<button type="submit" name="action" value="GoToTest4">次のテストへ</button>
-<% } %>
-</form>
+<table>
+<tr>
+<td>
+<label><input type="radio" name="entryPlan" value="hoge1" onclick="entryChange1();" checked="checked" />正解を非表示</label>
+<label><input type="radio" name="entryPlan" value="hoge2" onclick="entryChange1();" />正解を表示</label>
+</td>
+</tr>
+</table>
 
+<!-- 表示非表示切り替え -->
+<div id="firstNotice">
+正解はそれぞれ⑤と①です。
+</div>
+<br>
+<button type="submit" class="btn btn-success" name="action" value="GoToTest4">テスト４本題へ</button>
+</form>
+</div>
+<br>
 </body>
 </html>

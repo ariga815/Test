@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <html>
 <head>
 <jsp:include page="common.jsp" flush="true" />
@@ -28,7 +27,7 @@
 正解：<br>
 経営者が社内外の／情報を迅速／かつ的確に／把握できる／ような仕組みが必要だ<br>
 ４番目は「把握できる」であり、よって正解は選択肢①です。<br></p>
-
+<form action="ActionServlet" method="post">
 <p>【練習問題】
 （１）並び替えたときに３番目になる選択肢を解答してください。<br>
 ①重視してアルバイトを ②時給の高さだけでなく ③選ぶ人が ④増えている ⑤働きやすさを<br>
@@ -47,7 +46,6 @@
 <input type="radio" name="answer2" value="4">（４）<br>
 <input type="radio" name="answer2" value="5">（５）<br>
 <br>
-<form name="submit_scroll" action="ActionServlet" method="GET">
 <table>
 <tr>
 <td>
