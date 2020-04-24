@@ -7,21 +7,8 @@
 <jsp:include page="common.jsp" flush="true" />
 <title>適正テスト１</title>
 </head>
-<script type="text/javascript">
-function entryChange1(){
-radio = document.getElementsByName('entryPlan')
-if(radio[0].checked) {
-document.getElementById('firstNotice').style.display = "none";
-}else if(radio[1].checked) {
-//特典
-document.getElementById('firstNotice').style.display = "";
-}
-}
-//オンロードさせ、リロード時に選択を保持
-window.onload = entryChange1;
-</script>
 <body>
-<div class="col-10 ml-3">
+<div class="container">
 
 <h1>テスト１ 説明</h1>
 <h2>解答時間 ３分</h2>
@@ -75,7 +62,7 @@ window.onload = entryChange1;
 正解はそれぞれ①と②です。
 </div>
 <br>
-<button type="submit" name="action" value="GoToTest1">テスト１本題へ</button>
+<button type="submit" class="btn btn-success" name="action" value="GoToTest1">テスト１本題へ</button>
 </form>
 </div>
 <br>
