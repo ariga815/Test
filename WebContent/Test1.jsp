@@ -3,11 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<jsp:include page="common.jsp" flush="true" />
 <title>適正テスト１</title>
 </head>
 <body>
-<h1>テスト１ ＜解答時間５分＞</h1>
+<div class="container">
+
+<h1>テスト１ ＜回答時間５分＞</h1>
 
 <form action="ActionServlet" method="post">
 <p><b>(1)並べ替えたときに2番目になる選択肢を解答してください。</b><br>
@@ -373,7 +375,8 @@
 <br>
 <p><b>これでテスト1は終わりです。</b></p><br>
 
-<button type="submit" name="action" value="Test1_submit">送信</button>
+<button type="submit" class="btn btn-success" name="action" value="GoToTest2">送信</button>
 </form>
+</div>
 </body>
 </html>
