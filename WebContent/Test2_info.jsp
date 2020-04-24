@@ -10,7 +10,7 @@
 <div class="container">
 
 <h1>テスト２ 説明</h1>
-<h2>解答時間 ３分</h2>
+<h2>所要時間 ３分</h2>
 
 <font color="red">※３分後に自動的にテストページに進みます。</font>
 
@@ -25,10 +25,10 @@
 6+4-8×1＝<br>
 ①16 ②-6 ③2 ④14 ⑤17<br>
 <br>
-正解：<br>
+【答】<br>
 計算結果は「２」であり、よって正解は選択肢③です。<br></p>
 <form action="ActionServlet" method="post">
-<p>【練習問題】
+<p>【練習問題】<br>
 （１）8+2×5+8=<br>
 ①32 ②37 ③26 ④24 ⑤27<br>
 <input type="radio" name="answer1" value="1">（１）<br>
@@ -49,8 +49,7 @@
 <table>
 <tr>
 <td>
-<label><input type="radio" name="entryPlan" value="hoge1" onclick="entryChange1();" checked="checked" />正解を非表示</label>
-<label><input type="radio" name="entryPlan" value="hoge2" onclick="entryChange1();" />正解を表示</label>
+<label><input type="checkbox" name="answer" value="hoge1" onclick="entryChange1(this.checked);" />練習問題正解を表示</label>
 </td>
 </tr>
 </table>

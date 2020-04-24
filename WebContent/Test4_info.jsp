@@ -10,7 +10,7 @@
 <div class="container">
 
 <h1>テスト４ 説明</h1>
-<h2>解答時間 ３分</h2>
+<h2>所要時間 ３分</h2>
 
 <font color="red">※３分後に自動的にテストページに進みます。</font>
 
@@ -24,7 +24,7 @@
 （１）45, 48, 51, □, 57<br>
 ①56 ②52 ③54 ④55 ⑤53<br>
 <br>
-正解：<br>
+【答】<br>
 左から順に3ずつ増加しています。よって正解は「54」、選択肢③です。<br></p>
 <form action="ActionServlet" method="post">
 <p>【練習問題】
@@ -48,8 +48,7 @@
 <table>
 <tr>
 <td>
-<label><input type="radio" name="entryPlan" value="hoge1" onclick="entryChange1();" checked="checked" />正解を非表示</label>
-<label><input type="radio" name="entryPlan" value="hoge2" onclick="entryChange1();" />正解を表示</label>
+<label><input type="checkbox" name="answer" value="hoge1" onclick="entryChange1(this.checked);" />練習問題正解を表示</label>
 </td>
 </tr>
 </table>

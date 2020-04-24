@@ -9,7 +9,7 @@
 <body>
 <div class="container">
 
-<h1>テスト２ ＜解答時間５分＞</h1>
+<h1>テスト２ ＜所要時間５分＞</h1>
 
 <form action="ActionServlet" method="post">
 <p><b>(1) 6✕4＋6－6＝</b><br>
@@ -373,9 +373,10 @@
 </p>
 
 <br>
-<p><b>これでテスト2は終わりです。</b></p><br>
+<p><b>これでテスト２は終わりです。</b></p><br>
 
 <button type="submit" class="btn btn-success" name="action" value="Test2_submit">送信</button>
+<br><br>
 </form>
 </div>
 </body>

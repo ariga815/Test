@@ -9,7 +9,7 @@
 <body>
 <div class="container">
 
-<h1>テスト３ ＜解答時間５分＞</h1>
+<h1>テスト３ ＜所要時間５分＞</h1>
 
 <form action="ActionServlet" method="post">
 <p><b>(1) 電話：受話器 ＝□：ペダル</b><br>
@@ -373,9 +373,10 @@
 </p>
 
 <br>
-<p><b>これでテスト3は終わりです。</b></p><br>
+<p><b>これでテスト３は終わりです。</b></p><br>
 
 <button type="submit" class="btn btn-success" name="action" value="Test3_submit">送信</button>
+<br><br>
 </form>
 </div>
 </body>

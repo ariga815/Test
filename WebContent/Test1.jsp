@@ -9,7 +9,7 @@
 <body>
 <div class="container">
 
-<h1>テスト１ ＜回答時間５分＞</h1>
+<h1>テスト１ ＜所要時間５分＞</h1>
 
 <form action="ActionServlet" method="post">
 <p><b>(1)並べ替えたときに2番目になる選択肢を解答してください。</b><br>
@@ -373,9 +373,10 @@
 </p>
 
 <br>
-<p><b>これでテスト1は終わりです。</b></p><br>
+<p><b>これでテスト１は終わりです。</b></p><br>
 
 <button type="submit" class="btn btn-success" name="action" value="Test1_submit">送信</button>
+<br><br>
 </form>
 </div>
 </body>
