@@ -375,7 +375,7 @@
 <br>
 <p><b>これでテスト1は終わりです。</b></p><br>
 
-<button type="submit" class="btn btn-success" name="action" value="GoToTest2">送信</button>
+<button type="submit" class="btn btn-success" name="action" value="Test1_submit">送信</button>
 </form>
 </div>
 </body>
