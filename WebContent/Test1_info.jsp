@@ -1,12 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
 <head>
-<meta charset="UTF-8">
+<jsp:include page="common.jsp" flush="true" />
 <title>適正テスト１</title>
 </head>
 <body>
+<div class="container">
+
 <h1>テスト１ 説明</h1>
 <h2>解答時間 ３分</h2>
 
@@ -25,7 +28,7 @@
 正解：<br>
 経営者が社内外の／情報を迅速／かつ的確に／把握できる／ような仕組みが必要だ<br>
 ４番目は「把握できる」であり、よって正解は選択肢①です。<br></p>
-<form action="ActionServlet" method="post">
+
 <p>【練習問題】
 （１）並び替えたときに３番目になる選択肢を解答してください。<br>
 ①重視してアルバイトを ②時給の高さだけでなく ③選ぶ人が ④増えている ⑤働きやすさを<br>
@@ -44,14 +47,24 @@
 <input type="radio" name="answer2" value="4">（４）<br>
 <input type="radio" name="answer2" value="5">（５）<br>
 <br>
-<button type="submit" name="action" value="test1_check">解答を確認する</button><br>
-<%
-if(request.getAttribute("flg").equals("1")){
-%>
-<p>正解はそれぞれ①と②です。<br></p>
-<button type="submit" name="action" value="GoToTest1">次のテストへ</button>
-<% } %>
-</form>
+<form name="submit_scroll" action="ActionServlet" method="GET">
+<table>
+<tr>
+<td>
+<label><input type="radio" name="entryPlan" value="hoge1" onclick="entryChange1();" checked="checked" />正解を非表示</label>
+<label><input type="radio" name="entryPlan" value="hoge2" onclick="entryChange1();" />正解を表示</label>
+</td>
+</tr>
+</table>
 
+<!-- 表示非表示切り替え -->
+<div id="firstNotice">
+正解はそれぞれ①と②です。
+</div>
+<br>
+<button type="submit" class="btn btn-success" name="action" value="GoToTest1">テスト１本題へ</button>
+</form>
+</div>
+<br>
 </body>
 </html>
