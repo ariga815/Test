@@ -7,12 +7,18 @@
 <title>適性検査説明</title>
 </head>
 <body>
-<div class="container">
-<div class="col-9 ml-7">
-<img src="isa_logo.jpg" alt="isa" title="isa" >
-<h1>適性検査について</h1>
 <br>
-<h4><font color="#6495ED">受験に際して</font></h4>
+<div class="container">
+<div class="row">
+<div class="col-6">
+<h1>適性検査について</h1>
+</div>
+<div class="col-6">
+<img src="isa_logo.jpg" alt="isa" title="isa" >
+</div>
+</div>
+<br>
+<h4 class="text-success">受験に際して</h4>
 
 <ul>
 <li>このテストは厳密に時間を計測しながら行います。</li>
@@ -56,7 +62,6 @@
 <form action="ActionServlet" method="post">
 <button type="submit" class="btn btn-success" name="action" value="top">受験者情報入力に進む</button><br>
 </form>
-</div>
 </div>
 </body>
 </html>
