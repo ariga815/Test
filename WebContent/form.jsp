@@ -40,7 +40,7 @@
 <body>
 <div class="container">
 <div class="col-7 ml-7">
-
+<img src="isa_logo.jpg" alt="isa" title="isa" >
 <h1>受験者情報</h1>
 
 <form action="ActionServlet" method="post">

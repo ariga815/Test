@@ -9,6 +9,7 @@
 <body>
 <div class="container">
 <div class="col-9 ml-7">
+<img src="isa_logo.jpg" alt="isa" title="isa" >
 <h1>適性検査について</h1>
 <br>
 <h4><font color="#6495ED">受験に際して</font></h4>
@@ -52,7 +53,6 @@
 </tbody>
 </table>
 </div>
-<br>
 <form action="ActionServlet" method="post">
 <button type="submit" class="btn btn-success" name="action" value="top">受験者情報入力に進む</button><br>
 </form>
