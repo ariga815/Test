@@ -7,11 +7,24 @@
 <title>適正テスト１</title>
 </head>
 <body>
+    <script>
+      alert('このテストは時間管理されています。\n制限時間は５分です。\n「OK」をクリックするとスタートします。');
+    var alertmsg = function(){
+  	alert("時間です！\n次のページに進みます。");
+  	var test1 = document.getElementById("test1");
+  	var input = document.createElement('input');
+  	input.setAttribute('name', 'action');
+  	input.setAttribute('value', 'Test1_submit');
+  	test1.appendChild(input);
+  	test1.submit();
+	}
+	setTimeout(alertmsg, 300000);
+	</script>
 <div class="container">
 
-<h1>テスト１ ＜回答時間５分＞</h1>
+<h1>テスト１ ＜所要時間５分＞</h1>
 
-<form action="ActionServlet" method="post">
+<form id="test1" action="ActionServlet" method="post">
 <p><b>(1)並べ替えたときに2番目になる選択肢を解答してください。</b><br>
 （１）今日になって（２）全身が（３）テニスをしたら （４） 筋肉痛になった（５） 昨日久しぶりに<br>
 <input type="radio" name="answer1" value="（１）">（１）<br>
@@ -373,9 +386,10 @@
 </p>
 
 <br>
-<p><b>これでテスト1は終わりです。</b></p><br>
+<p><b>これでテスト１は終わりです。</b></p><br>
 
 <button type="submit" class="btn btn-success" name="action" value="Test1_submit">送信</button>
+<br><br>
 </form>
 </div>
 </body>

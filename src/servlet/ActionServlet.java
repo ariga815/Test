@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import action.FormAction;
+import action.OutputCsvAction;
 import action.Test1Action;
 
 /**
@@ -130,6 +131,9 @@ public class ActionServlet extends HttpServlet {
             	lineData.put("test4",te4List);
             	request.setAttribute("flg", "0");
             	url = "/end.jsp";
+            	//CSV出力（正答率）
+            	OutputCsvAction oCA = new OutputCsvAction();
+            	oCA.outRateCsv(lineData);
                 break;
 
             default:

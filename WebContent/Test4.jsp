@@ -3,13 +3,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+<jsp:include page="common.jsp" flush="true" />
 <meta charset="UTF-8">
 <title>適正テスト４</title>
 </head>
 <body>
-<h1>テスト４ ＜解答時間５分＞</h1>
+    <script>
+      alert('このテストは時間管理されています。\n制限時間は５分です。\n「OK」をクリックするとスタートします。');
+    var alertmsg = function(){
+  	alert("時間です！\n次のページに進みます。");
+  	var test1 = document.getElementById("test4");
+  	var input = document.createElement('input');
+  	input.setAttribute('name', 'action');
+  	input.setAttribute('value', 'Test4_submit');
+  	test1.appendChild(input);
+  	test1.submit();
+	}
+	setTimeout(alertmsg, 300000);
+	</script>
+<div class="container">
 
-<form action="ActionServlet" method="post">
+<h1>テスト４ ＜所要時間５分＞</h1>
+
+<form id="test4" action="ActionServlet" method="post">
 <p><b>(1) 30 , 34 , □ , 42 , 46</b><br>
 （１）36（２）40（３）38（４）50（５）39<br>
 <input type="radio" name="answer1" value="（１）">（１）<br>
@@ -371,9 +387,11 @@
 </p>
 
 <br>
-<p><b>これでテスト4は終わりです。</b></p><br>
+<p><b>これでテスト４は終わりです。</b></p><br>
 
-<button type="submit" name="action" value="Test4_submit">送信</button>
+<button type="submit" class="btn btn-success" name="action" value="Test4_submit">送信</button>
+<br><br>
 </form>
+</div>
 </body>
 </html>

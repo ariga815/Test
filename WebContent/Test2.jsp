@@ -3,13 +3,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<jsp:include page="common.jsp" flush="true" />
 <title>適正テスト２</title>
 </head>
 <body>
-<h1>テスト２ ＜解答時間５分＞</h1>
+    <script>
+      alert('このテストは時間管理されています。\n制限時間は５分です。\n「OK」をクリックするとスタートします。');
+    var alertmsg = function(){
+  	alert("時間です！\n次のページに進みます。");
+  	var test1 = document.getElementById("test2");
+  	var input = document.createElement('input');
+  	input.setAttribute('name', 'action');
+  	input.setAttribute('value', 'Test2_submit');
+  	test1.appendChild(input);
+  	test1.submit();
+	}
+	setTimeout(alertmsg, 300000);
+	</script>
+<div class="container">
 
-<form action="ActionServlet" method="post">
+<h1>テスト２ ＜所要時間５分＞</h1>
+
+<form id="test2" action="ActionServlet" method="post">
 <p><b>(1) 6✕4＋6－6＝</b><br>
 （１）28（２）22（３）24 （４）36（５）20<br>
 <input type="radio" name="answer1" value="（１）">（１）<br>
@@ -371,9 +386,11 @@
 </p>
 
 <br>
-<p><b>これでテスト2は終わりです。</b></p><br>
+<p><b>これでテスト２は終わりです。</b></p><br>
 
-<button type="submit" name="action" value="Test2_submit">送信</button>
+<button type="submit" class="btn btn-success" name="action" value="Test2_submit">送信</button>
+<br><br>
 </form>
+</div>
 </body>
 </html>

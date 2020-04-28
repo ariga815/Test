@@ -9,15 +9,23 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<link href="../css/my-bootstrap.css" rel="stylesheet">
+<link href="my-bootstrap.css" rel="stylesheet">
 </head>
 <script type="text/javascript">
-function entryChange1(){
-	radio = document.getElementsByName('entryPlan')
-	if(radio[0].checked) {
-		document.getElementById('firstNotice').style.display = "none";
-	}else if(radio[1].checked) {
+$(function(){
+	 history.pushState(null, null, null); //ブラウザバック無効化
+	 //ブラウザバックボタン押下時
+	 $(window).on("popstate", function (event) {
+	   history.pushState(null, null, null);
+	   window.alert('不正防止のため、前画面に戻ることはできません。');
+	 });
+	});
+
+function entryChange1(isChecked){
+	if(isChecked == true) {
 		document.getElementById('firstNotice').style.display = "";
+	}else {
+		document.getElementById('firstNotice').style.display = "none";
 	}
 }
 window.onload = entryChange1;
