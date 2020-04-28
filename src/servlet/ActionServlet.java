@@ -132,6 +132,8 @@ public class ActionServlet extends HttpServlet {
             	lineData.put("test4",te4List);
             	request.setAttribute("flg", "0");
             	url = "/end.jsp";
+            	//CSV出力（解答）
+            	oCA.outResultCsv(lineData);
             	//CSV出力（正答率）
             	oCA.outRateCsv(lineData);
                 break;
