@@ -63,5 +63,6 @@
 <button type="submit" class="btn btn-success" name="action" value="top">受験者情報入力に進む</button><br>
 </form>
 </div>
+<br>
 </body>
 </html>
