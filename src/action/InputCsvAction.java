@@ -111,4 +111,44 @@ public class InputCsvAction {
 		return convertScore;
 	}
 
+	/**
+	 * 解答の列名を取得
+	 * @return
+	 */
+	public List<String> getAnswerColumn(){
+		FileInputStream fi = null;
+		InputStreamReader is = null;
+		BufferedReader br = null;
+
+		List<String> AnswerData = new ArrayList<>();
+
+		try {
+			//csvファイルの取得
+			fi = new FileInputStream("C:\\Test\\AnswerData.csv");
+		    is = new InputStreamReader(fi,"Shift-JIS");
+		    br = new BufferedReader(is);
+
+		    String LineData; //行のデータ
+		    int line=1; //行数
+
+		    while((LineData = br.readLine()) != null) {
+		    	if(line < 3) {
+		    		AnswerData.add(LineData);
+		    	}
+		    	line++;
+		    }
+
+		}catch (Exception e) {
+		    e.printStackTrace();
+		} finally {
+		    try {
+		      br.close();
+		    } catch (Exception e) {
+		      e.printStackTrace();
+		    }
+		}
+		return AnswerData;
+	}
+
+
 }

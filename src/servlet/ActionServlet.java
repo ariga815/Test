@@ -23,6 +23,7 @@ public class ActionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Map<String,Object> lineData;
+	private OutputCsvAction oCA = new OutputCsvAction();
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -132,7 +133,6 @@ public class ActionServlet extends HttpServlet {
             	request.setAttribute("flg", "0");
             	url = "/end.jsp";
             	//CSV出力（正答率）
-            	OutputCsvAction oCA = new OutputCsvAction();
             	oCA.outRateCsv(lineData);
                 break;
 
