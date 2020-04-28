@@ -10,10 +10,10 @@
 <br>
 <div class="container">
 <div class="row">
-<div class="col-6">
+<div class="col-9">
 <h1>適性検査について</h1>
 </div>
-<div class="col-6">
+<div class="col-3">
 <img src="isa_logo.jpg" alt="isa" title="isa" >
 </div>
 </div>

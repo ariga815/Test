@@ -14,21 +14,21 @@
 
 <font color="red">※３分後に自動的にテストページに進みます。</font>
 
-<p>【問】<br>
+<h6>問</h6>
 下記をよく読み、解答してください。<br>
 次ページ以降には、四則演算の計算問題が並んでいます。<br>
-正しい計算結果の選択肢を選んでください。<br></p>
-
-
-<p>【例】<br>
+正しい計算結果の選択肢を選んでください。<br>
+<br>
+<h6>例</h6>
 （１）以下の計算問題を解いて正しい選択肢を解答してください。<br>
 6+4-8×1＝<br>
 ①16 ②-6 ③2 ④14 ⑤17<br>
 <br>
-【答】<br>
-計算結果は「２」であり、よって正解は選択肢③です。<br></p>
+<h6>答</h6>
+計算結果は「２」であり、よって正解は選択肢③です。<br>
 <form action="ActionServlet" method="post">
-<p>【練習問題】<br>
+<br>
+<h6>練習問題</h6>
 （１）8+2×5+8=<br>
 ①32 ②37 ③26 ④24 ⑤27<br>
 <input type="radio" name="answer1" value="1">（１）<br>
@@ -36,7 +36,7 @@
 <input type="radio" name="answer1" value="3">（３）<br>
 <input type="radio" name="answer1" value="4">（４）<br>
 <input type="radio" name="answer1" value="5">（５）<br>
-</p>
+<br>
 
 （２）3+4÷2+2=<br>
 ①19 ②18 ③7 ④21 ⑤-3<br>

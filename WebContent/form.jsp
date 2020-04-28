@@ -41,28 +41,28 @@
 <br>
 <div class="container">
 <div class="row">
-<div class="col-6">
+<div class="col-9">
 <h1>受験者情報</h1>
 </div>
-<div class="col-6">
+<div class="col-3">
 <img src="isa_logo.jpg" alt="isa" title="isa" >
 </div>
-<div class="col-6">
+<div class="col-10">
 <form action="ActionServlet" method="post">
-氏名：<font color="red">${ meMap.get("nameMe") }</font><br>
+<h6>氏名：<font color="red">${ meMap.get("nameMe") }</font></h6>
 <input type="text" name="name" class="form-control" id="exampleInputName2" placeholder="氏名を入力してください　例)ISA 太郎" value="<%= strName %>">
 <br>
-性別：<font color="red">${ meMap.get("genderMe") }</font><br>
+<h6>性別：<font color="red">${ meMap.get("genderMe") }</font></h6>
 <input type="radio" name="gender" value="man" <% if(strGender.equals("man")){ out.print("checked"); } %>>男<br>
 <input type="radio" name="gender" value="woman" <% if(strGender.equals("woman")){ out.print("checked"); } %>>女<br>
 <br>
-生年月日：<font color="red">${ meMap.get("birthMe") }</font><br>
+<h6>生年月日：<font color="red">${ meMap.get("birthMe") }</font></h6>
 <input type="date" name="birth" value="<%= strBirth %>"><br>
 <br>
-最終学歴：<font color="red">${ meMap.get("eduMe") }</font>
+<h6>最終学歴：<font color="red">${ meMap.get("eduMe") }</font></h6>
 <input type="text" name="edu" class="form-control" id="exampleInputName2" placeholder="最終学歴を入力してください　例)〇〇大学、〇〇専門学校" value="<%= strEdu %>" >
 <br>
-現在の状態：<font color="red">${ meMap.get("statusMe") }</font><br>
+<h6>現在の状態：<font color="red">${ meMap.get("statusMe") }</font></h6>
 <input type="radio" name="status" value="student" <% if(strStatus.equals("student")){ out.print("checked"); } %>>在学中<br>
 <input type="radio" name="status" value="second" <% if(strStatus.equals("second")){ out.print("checked"); } %>>第二新卒<br>
 <input type="radio" name="status" value="worker"<% if(strStatus.equals("worker")){ out.print("checked"); } %>>会社員<br>
