@@ -17,6 +17,10 @@ public class OutputCsvAction {
 
 	final private int TESTNUMBER = 40; //問題数
 
+	/**
+	 * 解答の出力
+	 * @param Map
+	 */
 	public void outResultCsv(Map<String,Object> Map) {
 
 		try {
@@ -68,41 +72,52 @@ public class OutputCsvAction {
     					pw.print("テスト４");
     				}
     				for(int j=0;j<40;j++) {
-
+    					pw.print(",");
     				}
     			}
     			pw.println();
 
     			pw.print("受験者ID,タイムスタンプ,氏名,性別,生年月日,最終学歴,現在の状態,");
-    			for(i=0;i<40;i++) {
-    				pw.print("問"+i+",");
+    			for(i=1;i<5;i++) {
+    				for(int j=1;j<=TESTNUMBER;j++) {
+    					pw.print("問"+j+",");
+    				}
     			}
     			pw.println();
+
+    			pw.print("答え");
+
+        		for(i=0;i<7;i++) {
+    				pw.print(",");
+    			}
+
+        		for(i=1;i<5;i++) {
+            		//テストの答えを取得
+            		List<String> answerList = getTestAnswer(i);
+            		for(int j=0;j<answerList.size();j++) {
+            			pw.print(answerList.get(j)+",");
+            		}
+            	}
+        		pw.println();
         	}
 
-    		pw.print("答え");
+    		//受験者情報出力
+        	outUserData(Map,pw);
 
-    		for(i=0;i<7;i++) {
-				pw.print(",");
-			}
-
-    		for(i=1;i<5;i++) {
-        		//テストの答えを取得
-        		List<String> answerList = getTestAnswer(i);
-        		for(int j=0;j<answerList.size();j++) {
-        			pw.print(answerList.get(i)+",");
+        	for(i=1;i<5;i++) {
+        		List<String> testList = (List<String>) Map.get("test"+i);
+        		for(int j=0;j<testList.size();j++) {
+        			if(testList.get(j) != null) {
+        				pw.print(testList.get(j)+",");
+        			}
+        			else {
+        				pw.print(",");
+        			}
         		}
         	}
 
-    		pw.println();
-
-    		//受験者情報出力
-        	setUserData(Map,pw);
-
-        	for(i=1;i<5;i++) {
-        		//テストの答えを取得
-        		List<String> answerList = getTestAnswer(i);
-        	}
+        	pw.println();
+        	pw.close();
 
 		} catch (IOException ex) {
             ex.printStackTrace();
@@ -154,7 +169,7 @@ public class OutputCsvAction {
         	}
 
         	//受験者情報出力
-        	setUserData(Map,pw);
+        	outUserData(Map,pw);
 
         	//各テストの解答数等の出力
         	int i; //テストの番号(1～4)
@@ -192,22 +207,13 @@ public class OutputCsvAction {
         	}
 
         	//言語出力
-        	pw.print(langACount+",");
-        	pw.print(langCCount+",");
-        	langCRate =Math.round(((double)langCCount / (double)langACount) * 100.0);
-        	pw.print((int)langCRate+"%,");
+        	outTestRate(pw,langACount,langCCount);
         	//数理出力
-        	pw.print(mathACount+",");
-        	pw.print(mathCCount+",");
-        	mathCRate =Math.round(((double)mathCCount / (double)mathACount) * 100.0);
-        	pw.print((int)mathCRate+"%,");
+        	outTestRate(pw,mathACount,mathCCount);
         	//総合出力
-        	int totalACount = langACount+mathACount;
+        	int totalACount = langACount + mathACount;
         	int totalCCount = langCCount + mathCCount;
-        	pw.print(totalACount+",");
-        	pw.print(totalCCount+",");
-        	double totalCRate =Math.round(((double)totalCCount / (double)totalACount) * 100.0);
-        	pw.print((int)totalCRate+"%,");
+        	outTestRate(pw,totalACount,totalCCount);
 
         	int convert = 0; //換算点
         	//言語 粗点・換算点
@@ -228,6 +234,7 @@ public class OutputCsvAction {
         	pw.print(convert+",");
 
         	//総合正答率
+        	double totalCRate =Math.round(((double)totalCCount / (double)totalACount) * 100.0);
         	pw.println((int)totalCRate+"%");
 
         	pw.close();
@@ -243,7 +250,7 @@ public class OutputCsvAction {
 	 * @param number
 	 * @return
 	 */
-	private List<String> getTestAnswer(int number){
+	 private List<String> getTestAnswer(int number){
 		List<String> answerList = new ArrayList<>();
 		List<String> allAnswerList = ica.getAnswer();
 
@@ -273,13 +280,14 @@ public class OutputCsvAction {
 		return answerList;
 	}
 
+
 	/**
 	 * 解答数、正答数、正答率を計算
 	 * @param testList
 	 * @param answerList
 	 * @return
 	 */
-	private List<Double> calcTest(List<String> testList,List<String> answerList){
+	 private List<Double> calcTest(List<String> testList,List<String> answerList){
 		List<Double> calcList = new ArrayList<>(); //0:解答数 1:正答数 2:正答率
 
 		double aCount = 0; //解答数
@@ -302,12 +310,13 @@ public class OutputCsvAction {
 		return calcList;
 	}
 
+
 	/**
 	 * 受験者情報の出力
 	 * @param Map
 	 * @param pw
 	 */
-	private void setUserData(Map<String,Object> Map, PrintWriter pw) {
+	 private void outUserData(Map<String,Object> Map, PrintWriter pw) {
 		//タイムスタンプ
     	Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -351,6 +360,19 @@ public class OutputCsvAction {
     			break;
     		}
     	}
+	}
+
+	/**
+	 * 解答数・正答数・正答率の出力
+	 * @param pw
+	 * @param ACount
+	 * @param CCount
+	 */
+	 private void outTestRate(PrintWriter pw,int ACount, int CCount) {
+		pw.print(ACount+",");
+    	pw.print(CCount+",");
+    	double CRate =Math.round(((double)CCount / (double)ACount) * 100.0);
+    	pw.print((int)CRate+"%,");
 	}
 
 }
