@@ -13,7 +13,7 @@
   	var test1 = document.getElementById("test4_info");
   	var input = document.createElement('input');
   	input.setAttribute('name', 'action');
-  	input.setAttribute('value', 'GoToTest3');
+  	input.setAttribute('value', 'GoToTest4');
   	test1.appendChild(input);
   	test1.submit();
 	}
