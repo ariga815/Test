@@ -9,14 +9,13 @@
 <body>
 <br>
 <div class="container">
-<div class="row">
+<div class="float-right">
+<img src="isa_logo.jpg" width="80" height="30" alt="isa" title="isa" class="img-responsive">
+</div>
 <div class="col-9">
 <h1>適性検査について</h1>
 </div>
-<div class="col-3">
-<img src="isa_logo.jpg" alt="isa" title="isa" >
-</div>
-</div>
+
 <br>
 <h4 class="text-success">受験に際して</h4>
 
@@ -25,9 +24,9 @@
 <li>テスト実施中に所要時間を過ぎた場合は、その時点の回答内容が自動的に送信されます。</li>
 <li>次のテストに移行すると、自動的にタイマーが作動します。</li>
 <li>不正防止のため、ブラウザバック(戻るボタン)の使用を禁止しています。</li>
-</ul>
+</ul><br>
 
-<div class="col-7 ml-7">
+<div class="col-12 col-md-7">
 <table class="table table-bordered">
 <thead>
 <tr>

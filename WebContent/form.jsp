@@ -41,13 +41,16 @@
 <br>
 <div class="container">
 <div class="row">
+<div class="col-12">
+<div class="float-right">
+<img src="isa_logo.jpg" width="80" height="30" alt="isa" title="isa" class="img-responsive">
+</div>
 <div class="col-9">
-<h1>受験者情報</h1>
+<h2>受験者情報</h2><br>
 </div>
-<div class="col-3">
-<img src="isa_logo.jpg" alt="isa" title="isa" >
+
 </div>
-<div class="col-10">
+<div class="col-12">
 <form action="ActionServlet" method="post">
 <h6>氏名：<font color="red">${ meMap.get("nameMe") }</font></h6>
 <input type="text" name="name" class="form-control" id="exampleInputName2" placeholder="氏名を入力してください　例)ISA 太郎" value="<%= strName %>">
