@@ -218,11 +218,11 @@ public class OutputCsvAction {
         	int convert = 0; //換算点
         	//言語 粗点・換算点
         	pw.print(langCCount+",");
-        	convert = ica.getConvertScore(langACount,"lang");
+        	convert = ica.getConvertScore(langCCount,"lang");
         	pw.print(convert+",");
         	//数理 粗点・換算点
         	pw.print(mathCCount+",");
-        	convert = ica.getConvertScore(mathACount,"math");
+        	convert = ica.getConvertScore(mathCCount,"math");
         	pw.print(convert+",");
         	//総合解答数 粗点・換算点
         	pw.print(totalACount+",");
