@@ -48,7 +48,7 @@ public class OutputCsvAction {
 			else {
 				fos = new FileOutputStream("C:\\Test\\OriginalTestResult.csv",true);
 			}
-			OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("Shift_JIS"));
+			OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("UTF-8"));
     		PrintWriter pw = new PrintWriter(osw);
 
     		int i;
@@ -151,7 +151,7 @@ public class OutputCsvAction {
 			else {
 				fos = new FileOutputStream("C:\\Test\\TestResult.csv",true);
 			}
-			OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("Shift_JIS"));
+			OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("UTF-8"));
         	PrintWriter pw = new PrintWriter(osw);
 
         	if(existFlg == false) {
