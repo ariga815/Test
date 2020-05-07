@@ -415,8 +415,49 @@ public class OutputCsvAction {
 			 }
 
 			 //受験者情報出力
-			 outUserData(Map,pw);
-			 pw.println();
+			 //タイムスタンプ
+			 Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+			 SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+			 String time = sdf.format(timestamp);
+			 //受験者ID
+			 sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+			 String userId = sdf.format(timestamp);
+
+			 pw.print(userId+",");
+			 pw.print(time+",");
+
+			 //名前
+			 pw.print(Map.get("name")+",");
+			 //性別
+			 String gender = (String) Map.get("gender");
+			 if(gender.contentEquals("man")) {
+				 pw.print("男,");
+			 }
+			 else {
+				 pw.print("女,");
+			 }
+			 //生年月日
+			 pw.print(Map.get("birth")+",");
+			 //最終学歴
+			 pw.print(Map.get("edu")+",");
+			 //現在の状態
+			 String status = (String) Map.get("status");
+			 if(status.equals("sonota")) {
+				 pw.println((String)Map.get("sonota"));
+			 }
+			 else {
+				 switch(status) {
+				 case "student":
+					 pw.println("在学中");
+					 break;
+				 case "second":
+					 pw.println("第二新卒");
+					 break;
+				 case "worker":
+					 pw.println("会社員");
+					 break;
+				 }
+			 }
 			 pw.close();
 
 		 } catch (IOException ex) {
