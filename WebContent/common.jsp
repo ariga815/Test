@@ -29,5 +29,10 @@ function entryChange1(isChecked){
 	}
 }
 window.onload = entryChange1;
+
+function display(){
+	document.getElementById('firstNotice').style.display = "";
+}
+
 </script>
 </html>

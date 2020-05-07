@@ -74,7 +74,6 @@ public class ActionServlet extends HttpServlet {
             	Map<String,String> meMap = ac.vali();
 
             	if(meMap.isEmpty()) {
-            		request.setAttribute("flg", "0");
             		url = "/Test1_info.jsp";
             		break;
             	}
@@ -88,11 +87,6 @@ public class ActionServlet extends HttpServlet {
             	Test1Action te1 = new Test1Action();
             	List<String> te1List = te1.set(request);
             	lineData.put("test1",te1List);
-            	request.setAttribute("flg", "0");
-            	url = "/Test2_info.jsp";
-                break;
-            case "test2_check":
-            	request.setAttribute("flg", "1");
             	url = "/Test2_info.jsp";
                 break;
             case "GoToTest2":
@@ -102,11 +96,6 @@ public class ActionServlet extends HttpServlet {
             	Test1Action te2 = new Test1Action();
             	List<String> te2List = te2.set(request);
             	lineData.put("test2",te2List);
-            	request.setAttribute("flg", "0");
-            	url = "/Test3_info.jsp";
-                break;
-            case "test3_check":
-            	request.setAttribute("flg", "1");
             	url = "/Test3_info.jsp";
                 break;
             case "GoToTest3":
@@ -116,11 +105,6 @@ public class ActionServlet extends HttpServlet {
             	Test1Action te3 = new Test1Action();
             	List<String> te3List = te3.set(request);
             	lineData.put("test3",te3List);
-            	request.setAttribute("flg", "0");
-            	url = "/Test4_info.jsp";
-                break;
-            case "test4_check":
-            	request.setAttribute("flg", "1");
             	url = "/Test4_info.jsp";
                 break;
             case "GoToTest4":
@@ -130,7 +114,6 @@ public class ActionServlet extends HttpServlet {
             	Test1Action te4 = new Test1Action();
             	List<String> te4List = te4.set(request);
             	lineData.put("test4",te4List);
-            	request.setAttribute("flg", "0");
             	url = "/end.jsp";
             	//CSV出力（解答）
             	oCA.outResultCsv(lineData);
@@ -143,6 +126,7 @@ public class ActionServlet extends HttpServlet {
                 break;
         	}
         }
+
 
         RequestDispatcher dis = request.getRequestDispatcher(url);
 		dis.forward(request, response);

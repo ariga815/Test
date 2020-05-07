@@ -23,9 +23,12 @@
 <div class="container">
 
 <h1>テスト２ ＜所要時間５分＞</h1>
+※ボタンを押してテストを開始してください<br>
+<input type=button class="btn btn-success" name="answer" value="問題を表示" onclick="display()" />
 
+<div id="firstNotice">
 <form id="test2" action="ActionServlet" method="post">
-<p><b>(1) 6✕4＋6－6＝</b><br>
+<br><p><b>(1) 6✕4＋6－6＝</b><br>
 （１）28（２）22（３）24 （４）36（５）20<br>
 <input type="radio" name="answer1" value="（１）">（１）<br>
 <input type="radio" name="answer1" value="（２）">（２）<br>
@@ -391,6 +394,7 @@
 <button type="submit" class="btn btn-success" name="action" value="Test2_submit">送信</button>
 <br><br>
 </form>
+</div>
 </div>
 </body>
 </html>

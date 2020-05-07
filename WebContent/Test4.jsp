@@ -24,9 +24,12 @@
 <div class="container">
 
 <h1>テスト４ ＜所要時間５分＞</h1>
+※ボタンを押してテストを開始してください<br>
+<input type=button class="btn btn-success" name="answer" value="問題を表示" onclick="display()" />
 
+<div id="firstNotice">
 <form id="test4" action="ActionServlet" method="post">
-<p><b>(1) 30 , 34 , □ , 42 , 46</b><br>
+<br><p><b>(1) 30 , 34 , □ , 42 , 46</b><br>
 （１）36（２）40（３）38（４）50（５）39<br>
 <input type="radio" name="answer1" value="（１）">（１）<br>
 <input type="radio" name="answer1" value="（２）">（２）<br>
@@ -392,6 +395,7 @@
 <button type="submit" class="btn btn-success" name="action" value="Test4_submit">送信</button>
 <br><br>
 </form>
+</div>
 </div>
 </body>
 </html>

@@ -23,9 +23,12 @@
 <div class="container">
 
 <h1>テスト１ ＜所要時間５分＞</h1>
+※ボタンを押してテストを開始してください<br>
+<input type=button class="btn btn-success" name="answer" value="問題を表示" onclick="display()" />
 
+<div id="firstNotice">
 <form id="test1" action="ActionServlet" method="post">
-<p><b>(1)並べ替えたときに2番目になる選択肢を解答してください。</b><br>
+<br><p><b>(1)並べ替えたときに2番目になる選択肢を解答してください。</b><br>
 （１）今日になって（２）全身が（３）テニスをしたら （４） 筋肉痛になった（５） 昨日久しぶりに<br>
 <input type="radio" name="answer1" value="（１）">（１）<br>
 <input type="radio" name="answer1" value="（２）">（２）<br>
@@ -391,6 +394,7 @@
 <button type="submit" class="btn btn-success" name="action" value="Test1_submit">送信</button>
 <br><br>
 </form>
+</div>
 </div>
 </body>
 </html>
