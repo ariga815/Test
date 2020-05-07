@@ -75,6 +75,8 @@ public class ActionServlet extends HttpServlet {
 
             	if(meMap.isEmpty()) {
             		url = "/Test1_info.jsp";
+            		//不正防止のため受験者情報のみCSV出力
+                	oCA.outUserDataCsv(lineData);
             		break;
             	}
             	request.setAttribute("meMap", meMap);
