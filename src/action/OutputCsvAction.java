@@ -375,4 +375,53 @@ public class OutputCsvAction {
     	pw.print((int)CRate+"%,");
 	}
 
+	 /**
+	  * @param Map
+	  * 受験者情報のみCSV出力
+	  */
+	 public void outUserDataCsv(Map<String,Object> Map) {
+
+		 try {
+			 //フォルダの確認（ない場合は作成）
+			 File folder = new File("c:\\Test");
+			 if(folder.exists() == false) {
+				 folder.mkdir();
+			 }
+
+			 //出力CSVファイルの確認
+			 boolean existFlg;
+			 File file = new File("C:\\Test\\UserData.csv");
+			 if(file.exists()) {
+				 existFlg = true;
+			 }
+			 else {
+				 existFlg = false;
+			 }
+
+			 // 出力ファイルの作成
+			 FileOutputStream fos;
+			 if(existFlg == false) {
+				 fos = new FileOutputStream("C:\\Test\\UserData.csv",false);
+			 }
+			 else {
+				 fos = new FileOutputStream("C:\\Test\\UserData.csv",true);
+			 }
+			 OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("UTF-8"));
+			 PrintWriter pw = new PrintWriter(osw);
+
+			 if(existFlg == false) {
+				 //新規作成するときのみ実行
+				 pw.println("受験者ID,タイムスタンプ,氏名,性別,生年月日,最終学歴,現在の状態");
+			 }
+
+			 //受験者情報出力
+			 outUserData(Map,pw);
+			 pw.println();
+			 pw.close();
+
+		 } catch (IOException ex) {
+			 ex.printStackTrace();
+		 }
+	 }
+
 }
