@@ -1,17 +1,22 @@
 package action;
 
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.nio.charset.Charset;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 public class OutputCsvAction {
 
@@ -157,7 +162,7 @@ public class OutputCsvAction {
         	if(existFlg == false) {
         		//新規作成するときのみ実行
         		pw.print(",,,,,,,テスト１（文章把握）,,,テスト２（四則演算）,,,テスト３（言語推論）,,,テスト４（数列）");
-        		pw.println(",,,言語（テスト１＋３）,,,数理（テスト２＋４）,,,総合（テスト１-４）,,,言語正答数,,数理正答数,,総合解答数,,総合正答数,, ");
+        		pw.println(",,,言語（テスト１＋３）,,,数理（テスト２＋４）,,,総合（テスト１-４）,,,言語正答数,,数理正答数,,総合解答数,,総合正答数,,,受験回数");
         		pw.print("受験者ID,タイムスタンプ,氏名,性別,生年月日,最終学歴,現在の状態,");
         		for(int i=0;i<7;i++) {
         			pw.print("解答数,正答数,正答率,");
@@ -165,7 +170,7 @@ public class OutputCsvAction {
         		for(int j=0;j<4;j++) {
         			pw.print("粗点,換算点,");
         		}
-        		pw.println("総合正答率");
+        		pw.println("総合正答率,受験回数");
         	}
 
         	//受験者情報出力
@@ -235,7 +240,11 @@ public class OutputCsvAction {
 
         	//総合正答率
         	double totalCRate =Math.round(((double)totalCCount / (double)totalACount) * 100.0);
-        	pw.println((int)totalCRate+"%");
+        	pw.print((int)totalCRate+"%,");
+
+        	//受験回数
+        	int TestCnt = UserDataDoubleCheck(Map);
+        	pw.println(TestCnt+"回目");
 
         	pw.close();
 
@@ -429,13 +438,7 @@ public class OutputCsvAction {
 			 //名前
 			 pw.print(Map.get("name")+",");
 			 //性別
-			 String gender = (String) Map.get("gender");
-			 if(gender.contentEquals("man")) {
-				 pw.print("男,");
-			 }
-			 else {
-				 pw.print("女,");
-			 }
+			 pw.print(Map.get("gender")+",");
 			 //生年月日
 			 pw.print(Map.get("birth")+",");
 			 //最終学歴
@@ -446,23 +449,110 @@ public class OutputCsvAction {
 				 pw.println((String)Map.get("sonota"));
 			 }
 			 else {
-				 switch(status) {
-				 case "student":
-					 pw.println("在学中");
-					 break;
-				 case "second":
-					 pw.println("第二新卒");
-					 break;
-				 case "worker":
-					 pw.println("会社員");
-					 break;
-				 }
+				 pw.println(status);
 			 }
 			 pw.close();
 
 		 } catch (IOException ex) {
 			 ex.printStackTrace();
-		 }
 	 }
+}
 
+	 /**
+	  * @param Map
+	  * 受験回数を計算
+	  */
+	 public static int UserDataDoubleCheck(Map<String,Object> Map) {
+
+		 //ファイル読み込みで使用する３つのクラス
+		 FileInputStream fi = null;
+		 InputStreamReader is = null;
+		 BufferedReader br = null;
+
+		 //受験者情報ファイル読み込み用インスタンスを生成
+		 Map<String,Object> TmpUserData;
+		 int DoubleCnt = 0;
+		 String Name = Map.get("name").toString().replace("　","").replaceAll("[\s]","");
+		 String Edu = Map.get("edu").toString().replace("　","").replaceAll("[\s]","");
+
+		 try {
+
+			 //読み込みファイルのインスタンス生成
+			 //ファイル名を指定する
+			 fi = new FileInputStream("C:\\Test\\UserData.csv");
+			 is = new InputStreamReader(fi);
+			 br = new BufferedReader(is);
+
+			 //読み込み行
+			 String line;
+			 //読み込み行数の管理
+			 int i = 0;
+
+			 //1行ずつ読み込みを行う
+			 while ((line = br.readLine()) != null) {
+				 //先頭行は列名
+				 if (i > 0) {
+
+					 //カンマで分割した内容を配列に格納する
+					 String[] data = line.split(",");
+
+					 //氏名,性別,生年月日,最終学歴,現在の状態を退避
+					 TmpUserData = new HashMap<String,Object>();
+					 TmpUserData.put("name",data[2].replace("　","").replaceAll("[\s]",""));
+					 TmpUserData.put("gender",data[3]);
+					 TmpUserData.put("birth",data[4]);
+					 TmpUserData.put("edu",data[5].replace("　","").replaceAll("[\s]",""));
+					 TmpUserData.put("status",data[6]);
+
+					 //重複項目数初期化
+					 int ChkCnt = 0;
+
+					 //氏名の判定
+					 if(Name.equals(TmpUserData.get("name"))){
+						 ChkCnt++;
+					 }
+					 //性別の判定
+					 if(Map.get("gender").equals(TmpUserData.get("gender"))){
+						 ChkCnt++;
+					 }
+
+					 //生年月日の判定
+					 if(Map.get("birth").equals(TmpUserData.get("birth"))){
+						 ChkCnt++;
+					 }
+
+					 //最終学歴の判定
+					 if(Edu.equals(TmpUserData.get("edu"))){
+						 ChkCnt++;
+					 }
+
+					 //現在の状態の判定
+					 if(Map.get("status").equals(TmpUserData.get("status"))){
+						 ChkCnt++;
+					 }
+
+					 //氏名,性別,生年月日,最終学歴,現在の状態がすべて重複しているか判定
+					 if(ChkCnt == 5){
+						 DoubleCnt++;
+					 }
+				 }
+				 //行数のインクリメント
+				 i++;
+
+			 }
+
+		 } catch (Exception e) {
+			 e.printStackTrace();
+		 } finally {
+			 try {
+				 if(br!=null){
+					 br.close();
+				 }
+			 } catch (Exception e) {
+				 e.printStackTrace();
+			 }
+		 }
+
+		 return DoubleCnt;
+	 }
 }
