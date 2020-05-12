@@ -17,6 +17,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import constants.Constants;
+
 
 public class OutputCsvAction {
 
@@ -30,14 +32,14 @@ public class OutputCsvAction {
 
 		try {
 			//フォルダの確認（ない場合は作成）
-			File folder = new File("c:\\Test");
+			File folder = new File(Constants.dir + "");
 			if(folder.exists() == false) {
 				folder.mkdir();
 			}
 
 			//出力CSVファイルの確認
 			boolean existFlg;
-			File file = new File("C:\\Test\\OriginalTestResult.csv");
+			File file = new File(Constants.dir + "/OriginalTestResult.csv");
 			if(file.exists()) {
 				existFlg = true;
 			}
@@ -48,10 +50,10 @@ public class OutputCsvAction {
 			// 出力ファイルの作成
 			FileOutputStream fos;
 			if(existFlg == false) {
-				fos = new FileOutputStream("C:\\Test\\OriginalTestResult.csv",false);
+				fos = new FileOutputStream(Constants.dir + "/OriginalTestResult.csv",false);
 			}
 			else {
-				fos = new FileOutputStream("C:\\Test\\OriginalTestResult.csv",true);
+				fos = new FileOutputStream(Constants.dir + "/OriginalTestResult.csv",true);
 			}
 			OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("UTF-8"));
     		PrintWriter pw = new PrintWriter(osw);
@@ -140,7 +142,7 @@ public class OutputCsvAction {
 
 			//出力CSVファイルの確認
 			boolean existFlg;
-			File file = new File("C:\\Test\\TestResult.csv");
+			File file = new File(Constants.dir + "/TestResult.csv");
 			if(file.exists()) {
 				existFlg = true;
 			}
@@ -151,10 +153,10 @@ public class OutputCsvAction {
 			// 出力ファイルの作成
 			FileOutputStream fos;
 			if(existFlg == false) {
-				fos = new FileOutputStream("C:\\Test\\TestResult.csv",false);
+				fos = new FileOutputStream(Constants.dir + "/TestResult.csv",false);
 			}
 			else {
-				fos = new FileOutputStream("C:\\Test\\TestResult.csv",true);
+				fos = new FileOutputStream(Constants.dir + "/TestResult.csv",true);
 			}
 			OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("UTF-8"));
         	PrintWriter pw = new PrintWriter(osw);
@@ -391,15 +393,15 @@ public class OutputCsvAction {
 	 public void outUserDataCsv(Map<String,Object> Map) {
 
 		 try {
-			 //フォルダの確認（ない場合は作成）
-			 File folder = new File("c:\\Test");
-			 if(folder.exists() == false) {
-				 folder.mkdir();
-			 }
+			//フォルダの確認（ない場合は作成）
+			File folder = new File(Constants.dir + "");
+			if(folder.exists() == false) {
+				folder.mkdir();
+			}
 
 			 //出力CSVファイルの確認
 			 boolean existFlg;
-			 File file = new File("C:\\Test\\UserData.csv");
+			 File file = new File(Constants.dir + "/UserData.csv");
 			 if(file.exists()) {
 				 existFlg = true;
 			 }
@@ -410,10 +412,10 @@ public class OutputCsvAction {
 			 // 出力ファイルの作成
 			 FileOutputStream fos;
 			 if(existFlg == false) {
-				 fos = new FileOutputStream("C:\\Test\\UserData.csv",false);
+				 fos = new FileOutputStream(Constants.dir + "/UserData.csv",false);
 			 }
 			 else {
-				 fos = new FileOutputStream("C:\\Test\\UserData.csv",true);
+				 fos = new FileOutputStream(Constants.dir + "/UserData.csv",true);
 			 }
 			 OutputStreamWriter osw = new OutputStreamWriter(fos, Charset.forName("UTF-8"));
 			 PrintWriter pw = new PrintWriter(osw);
@@ -472,14 +474,14 @@ public class OutputCsvAction {
 		 //受験者情報ファイル読み込み用インスタンスを生成
 		 Map<String,Object> TmpUserData;
 		 int DoubleCnt = 0;
-		 String Name = Map.get("name").toString().replace("　","").replaceAll("[\s]","");
-		 String Edu = Map.get("edu").toString().replace("　","").replaceAll("[\s]","");
+		 String Name = Map.get("name").toString().replace("　","").replaceAll("[¥s]","");
+		 String Edu = Map.get("edu").toString().replace("　","").replaceAll("[¥s]","");
 
 		 try {
 
 			 //読み込みファイルのインスタンス生成
 			 //ファイル名を指定する
-			 fi = new FileInputStream("C:\\Test\\UserData.csv");
+			 fi = new FileInputStream(Constants.dir + "/UserData.csv");
 			 is = new InputStreamReader(fi);
 			 br = new BufferedReader(is);
 
@@ -498,10 +500,10 @@ public class OutputCsvAction {
 
 					 //氏名,性別,生年月日,最終学歴,現在の状態を退避
 					 TmpUserData = new HashMap<String,Object>();
-					 TmpUserData.put("name",data[2].replace("　","").replaceAll("[\s]",""));
+					 TmpUserData.put("name",data[2].replace("　","").replaceAll("[¥s]",""));
 					 TmpUserData.put("gender",data[3]);
 					 TmpUserData.put("birth",data[4]);
-					 TmpUserData.put("edu",data[5].replace("　","").replaceAll("[\s]",""));
+					 TmpUserData.put("edu",data[5].replace("　","").replaceAll("[¥s]",""));
 					 TmpUserData.put("status",data[6]);
 
 					 //重複項目数初期化

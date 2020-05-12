@@ -10,6 +10,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import constants.Constants;
+
 public class ExamineeInfo {
 	public static List<Map<String,Object>> ExamineeInfoGet() {
 
@@ -26,7 +28,7 @@ public class ExamineeInfo {
 
 		    //読み込みファイルのインスタンス生成
 		    //ファイル名を指定する
-		    fi = new FileInputStream("/Test/TestResult.csv");
+		    fi = new FileInputStream(Constants.dir + "/TestResult.csv");
 		    is = new InputStreamReader(fi);
 		    br = new BufferedReader(is);
 

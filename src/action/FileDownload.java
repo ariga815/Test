@@ -9,6 +9,8 @@ import java.io.OutputStreamWriter;
 
 import javax.servlet.http.HttpServletResponse;
 
+import constants.Constants;
+
 public class FileDownload {
 	public static String fileDownload(HttpServletResponse response){
 		String err = null;
@@ -22,7 +24,7 @@ public class FileDownload {
 
 		try {
 			// ダウンロード対象ファイルのFileオブジェクトを生成
-			File file = new File("/Test/OriginalTestResult.csv");
+			File file = new File(Constants.dir + "/OriginalTestResult.csv");
 
 			// ファイル存在チェック
 			if (!file.exists() || !file.isFile()) {
