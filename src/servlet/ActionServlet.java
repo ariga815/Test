@@ -1,6 +1,8 @@
 package servlet;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
 
@@ -11,6 +13,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import action.Chart;
+import action.ExamineeInfo;
+import action.FileDownload;
 import action.FormAction;
 import action.OutputCsvAction;
 import action.Test1Action;
@@ -24,6 +29,10 @@ public class ActionServlet extends HttpServlet {
 
 	private Map<String,Object> lineData;
 	private OutputCsvAction oCA = new OutputCsvAction();
+
+	//受験者一覧
+	private List<Map<String,Object>> examineeInfoList;
+	private Map<String,Object> examineeInfo;
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -40,7 +49,12 @@ public class ActionServlet extends HttpServlet {
 		// TODO Auto-generated method stub
         response.setContentType("text/html; charset=utf-8");
         request.setCharacterEncoding("utf-8");
-		this.process(request, response);
+        try {
+			this.process(request, response);
+		} catch (ParseException | URISyntaxException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -50,10 +64,15 @@ public class ActionServlet extends HttpServlet {
 		// TODO Auto-generated method stub
         response.setContentType("text/html; charset=utf-8");
         request.setCharacterEncoding("utf-8");
-		this.process(request, response);
+        try {
+			this.process(request, response);
+		} catch (ParseException | URISyntaxException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
 	}
 
-	protected void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, ParseException, URISyntaxException {
 		// TODO Auto-generated method stub
 
 		String action = request.getParameter("action");
@@ -121,6 +140,43 @@ public class ActionServlet extends HttpServlet {
             	oCA.outResultCsv(lineData);
             	//CSV出力（正答率）
             	oCA.outRateCsv(lineData);
+                break;
+            case "examineeInfo":
+            	examineeInfoList = ExamineeInfo.ExamineeInfoGet();
+            	if(examineeInfoList==null || examineeInfoList.size() == 0){
+                	request.setAttribute("err", "受験者情報が存在しません");
+            	}
+            	request.setAttribute("ExamineeInfoList", examineeInfoList);
+            	request.setAttribute("flg", "1");
+                url = "/examineeInfo.jsp";
+                break;
+            case "chart":
+            	if(request.getParameter("examineeId")==null || request.getParameter("examineeId").equals("")){
+                	request.setAttribute("ExamineeInfoList", examineeInfoList);
+                	request.setAttribute("flg", "1");
+                	request.setAttribute("err", "受験者を選択してください");
+            		url = "/examineeInfo.jsp";
+                    break;
+            	}
+            	examineeInfo = Chart.chart(examineeInfoList, request.getParameter("examineeId"));
+            	if(examineeInfo.get("err") !=null && examineeInfo.get("err").equals("1")){
+            		request.setAttribute("ExamineeInfoList", examineeInfoList);
+                	request.setAttribute("flg", "1");
+                	request.setAttribute("err", "データが不正のため、診断表を表示できません");
+                	url = "/examineeInfo.jsp";
+                    break;
+            	}
+            	request.setAttribute("ExamineeInfo", examineeInfo);
+                url = "/chart.jsp";
+                break;
+            case "download":
+            	String err = FileDownload.fileDownload(response);
+            	if(err != null && err.equals("1")){
+            		request.setAttribute("err", "解答結果のダウンロードができませんでした");
+            	}
+            	request.setAttribute("ExamineeInfoList", examineeInfoList);
+            	request.setAttribute("flg", "1");
+                url = "/examineeInfo.jsp";
                 break;
 
             default:

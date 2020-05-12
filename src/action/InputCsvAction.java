@@ -2,29 +2,30 @@ package action;
 
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.List;
 
 public class InputCsvAction {
+	InputStream is = null;
+	Reader reader = null;
+	BufferedReader br = null;
 	/**
 	 * 解答データを読み込む
 	 * @param number
 	 * @return
 	 */
 	public List<String> getAnswer(){
-		FileInputStream fi = null;
-		InputStreamReader is = null;
-		BufferedReader br = null;
 
 		List<String> AnswerData = new ArrayList<>();
 
 		try {
 			//csvファイルの取得
-			fi = new FileInputStream("C:\\Test\\AnswerData.csv");
-		    is = new InputStreamReader(fi,"Shift-JIS");
-		    br = new BufferedReader(is);
+		    is = getClass().getResourceAsStream("../file/AnswerData.csv");
+			reader = new InputStreamReader(is, "utf-8");
+			br = new BufferedReader(reader);
 
 		    String LineData; //行のデータ
 		    int line=1; //行数
@@ -60,17 +61,14 @@ public class InputCsvAction {
 	 * @return
 	 */
 	public int getConvertScore(int score, String type) {
-		FileInputStream fi = null;
-		InputStreamReader is = null;
-		BufferedReader br = null;
 
 		int convertScore = 0;
 
 		try {
 			//csvファイルの取得
-			fi = new FileInputStream("C:\\Test\\ConvertScore.csv");
-		    is = new InputStreamReader(fi,"Shift-JIS");
-		    br = new BufferedReader(is);
+		    is = getClass().getResourceAsStream("../file/ConvertScore.csv");
+			reader = new InputStreamReader(is, "utf-8");
+			br = new BufferedReader(reader);
 
 		    String LineData; //行のデータ
 		    int line=1; //行数
@@ -116,17 +114,14 @@ public class InputCsvAction {
 	 * @return
 	 */
 	public List<String> getAnswerColumn(){
-		FileInputStream fi = null;
-		InputStreamReader is = null;
-		BufferedReader br = null;
 
 		List<String> AnswerData = new ArrayList<>();
 
 		try {
 			//csvファイルの取得
-			fi = new FileInputStream("C:\\Test\\AnswerData.csv");
-		    is = new InputStreamReader(fi,"Shift-JIS");
-		    br = new BufferedReader(is);
+			is = getClass().getResourceAsStream("../file/AnswerData.csv");
+			reader = new InputStreamReader(is, "utf-8");
+			br = new BufferedReader(reader);
 
 		    String LineData; //行のデータ
 		    int line=1; //行数
