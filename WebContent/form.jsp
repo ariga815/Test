@@ -53,7 +53,7 @@
 <div class="col-12">
 <form action="ActionServlet" method="post">
 <h6>氏名：<font color="red">${ meMap.get("nameMe") }</font></h6>
-<input type="text" name="name" class="form-control" id="exampleInputName2" placeholder="氏名を入力してください　例)ISA 太郎" value="<%= strName %>">
+<input type="text" name="name" class="form-control" id="exampleInputName2" placeholder="氏名を入力してください　例)ISA 太郎" value="<%= strName %>" maxlength='256'>
 <br>
 <h6>性別：<font color="red">${ meMap.get("genderMe") }</font></h6>
 <input type="radio" name="gender" value="man" <% if(strGender.equals("man")){ out.print("checked"); } %>>男<br>
@@ -63,13 +63,13 @@
 <input type="date" name="birth" value="<%= strBirth %>"><br>
 <br>
 <h6>最終学歴：<font color="red">${ meMap.get("eduMe") }</font></h6>
-<input type="text" name="edu" class="form-control" id="exampleInputName2" placeholder="最終学歴を入力してください　例)〇〇大学、〇〇専門学校" value="<%= strEdu %>" >
+<input type="text" name="edu" class="form-control" id="exampleInputName2" placeholder="最終学歴を入力してください　例)〇〇大学、〇〇専門学校" value="<%= strEdu %>" maxlength='256'>
 <br>
 <h6>現在の状態：<font color="red">${ meMap.get("statusMe") }</font></h6>
 <input type="radio" name="status" value="student" <% if(strStatus.equals("student")){ out.print("checked"); } %>>在学中<br>
 <input type="radio" name="status" value="second" <% if(strStatus.equals("second")){ out.print("checked"); } %>>第二新卒<br>
 <input type="radio" name="status" value="worker"<% if(strStatus.equals("worker")){ out.print("checked"); } %>>会社員<br>
-<input type="radio" name="status" value="sonota" <% if(strStatus.equals("sonota")){ out.print("checked"); } %>>その他：<input type="text" name="sonota" value="<%= strSonota %>"><br>
+<input type="radio" name="status" value="sonota" <% if(strStatus.equals("sonota")){ out.print("checked"); } %>>その他：<input type="text" name="sonota" value="<%= strSonota %>" maxlength='256'><br>
 <br>
 <button type="submit" class="btn btn-success" name="action" value="form">送信</button>
 </form>
