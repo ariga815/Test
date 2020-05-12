@@ -19,6 +19,7 @@ import action.FileDownload;
 import action.FormAction;
 import action.OutputCsvAction;
 import action.Test1Action;
+import constants.Constants;
 
 /**
  * Servlet implementation class ActionServlet
@@ -33,6 +34,9 @@ public class ActionServlet extends HttpServlet {
 	//受験者一覧
 	private List<Map<String,Object>> examineeInfoList;
 	private Map<String,Object> examineeInfo;
+
+	private String userId;
+	private String pass;
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -76,6 +80,7 @@ public class ActionServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		String action = request.getParameter("action");
+
 
         // 遷移先
         String url = null;
@@ -142,6 +147,10 @@ public class ActionServlet extends HttpServlet {
             	oCA.outRateCsv(lineData);
                 break;
             case "examineeInfo":
+            	if(userId==null || userId.equals("") || pass==null || pass.equals("")){
+            		url = "/login.jsp";
+                    break;
+            	}
             	examineeInfoList = ExamineeInfo.ExamineeInfoGet();
             	if(examineeInfoList==null || examineeInfoList.size() == 0){
                 	request.setAttribute("err", "受験者情報が存在しません");
@@ -151,6 +160,10 @@ public class ActionServlet extends HttpServlet {
                 url = "/examineeInfo.jsp";
                 break;
             case "chart":
+            	if(userId==null || userId.equals("") || pass==null || pass.equals("")){
+            		url = "/login.jsp";
+                    break;
+            	}
             	if(request.getParameter("examineeId")==null || request.getParameter("examineeId").equals("")){
                 	request.setAttribute("ExamineeInfoList", examineeInfoList);
                 	request.setAttribute("flg", "1");
@@ -170,6 +183,10 @@ public class ActionServlet extends HttpServlet {
                 url = "/chart.jsp";
                 break;
             case "download":
+            	if(userId==null || userId.equals("") || pass==null || pass.equals("")){
+            		url = "/login.jsp";
+                    break;
+            	}
             	String err = FileDownload.fileDownload(response);
             	if(err != null && err.equals("1")){
             		request.setAttribute("err", "解答結果のダウンロードができませんでした");
@@ -178,6 +195,28 @@ public class ActionServlet extends HttpServlet {
             	request.setAttribute("flg", "1");
                 url = "/examineeInfo.jsp";
                 break;
+            case "login":
+            	userId = request.getParameter("userId");
+        		pass = request.getParameter("password");
+        		if(userId==null || userId.equals("") || pass==null || pass.equals("")){
+        			request.setAttribute("err", "ユーザID/パスワードを入力してください");
+        			url = "/login.jsp";
+                    break;
+        		}
+        		if(userId.equals(Constants.userId) && pass.equals(Constants.pass)){
+        			examineeInfoList = ExamineeInfo.ExamineeInfoGet();
+        			if(examineeInfoList==null || examineeInfoList.size() == 0){
+        				request.setAttribute("err", "受験者情報が存在しません");
+        			}
+        			request.setAttribute("ExamineeInfoList", examineeInfoList);
+        			request.setAttribute("flg", "1");
+        			url = "/examineeInfo.jsp";
+        			break;
+        		} else {
+        			request.setAttribute("err", "正しいユーザID/パスワードを入力してください");
+        			url = "/login.jsp";
+                    break;
+        		}
 
             default:
             	url = "/top.jsp";
