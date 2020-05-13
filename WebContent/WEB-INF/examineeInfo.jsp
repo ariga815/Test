@@ -28,7 +28,8 @@
 <form action="ActionServlet" method="post">
 <button type="submit" class="btn btn-success" name="action" value="examineeInfo">受験者一覧読み込み</button>
 <button type="submit" class="btn btn-success" name="action" value="download">解答結果</button>
-<button type="submit" class="btn btn-success" name="action" value="chart">診断表</button><br>
+<button type="submit" class="btn btn-success" name="action" value="chart">診断表</button>
+<button type="submit" class="btn btn-success" name="action" value="logout">戻る</button><br>
     <% if (err!=null && !err.equals("")) {%>
         <font color="red" size="2"><%=err%></font>
     <%}%>
