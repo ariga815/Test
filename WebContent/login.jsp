@@ -19,7 +19,7 @@
 }
 </style>
 <head>
-<jsp:include page="common2.jsp" flush="true" />
+<jsp:include page="common3.jsp" flush="true" />
 <title>ログイン</title>
 </head>
 <body>
