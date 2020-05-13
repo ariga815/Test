@@ -19,12 +19,18 @@
 }
 </style>
 <head>
-<jsp:include page="common3.jsp" flush="true" />
-<title>ログイン</title>
+<jsp:include page="/WEB-INF/common2.jsp" flush="true" />
+<title>基礎学力テスト</title>
 </head>
 <body>
 <div class="container">
-<h1>ログイン</h1>
+<div class="float-right">
+<img src="isa_logo.jpg" width="80" height="30" alt="isa" title="isa" class="img-responsive">
+</div>
+<div class="col-9">
+<h1><span style="background-color:lime">基礎学力テスト管理者ログイン</span></h1>
+</div>
+<div class="col-12 col-md-7">
 <form action="ActionServlet" method="post">
 <table class="table1">
 <tr>
@@ -44,8 +50,9 @@
     <font color="red" size="2"><%=err%></font>
 <%}%>
 <br>
-<button type="submit" class="btn btn-success" name="action" value="login">ログイン</button>
+<button type="submit" class="btn btn-success" name="action" value="adminLogin">ログイン</button>
 </form>
+</div>
 </div>
 </body>
 </html>
