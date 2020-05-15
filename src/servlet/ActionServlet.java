@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +22,7 @@ import action.LoginInfo;
 import action.LoginInfoFormAction;
 import action.OutputCsvAction;
 import action.Test1Action;
-import constants.Constants;
+import service.LoginService;
 
 /**
  * Servlet implementation class ActionServlet
@@ -36,6 +37,9 @@ public class ActionServlet extends HttpServlet {
 	//受験者一覧
 	private List<Map<String,Object>> examineeInfoList;
 	private Map<String,Object> examineeInfo;
+
+	// ログイン情報
+	Map<String, Object> loginInfo;
 
 	private String userId;
 	private String pass;
@@ -96,10 +100,16 @@ public class ActionServlet extends HttpServlet {
         }  else if(action.equals("adminLogin")) {
         	userId = request.getParameter("userId");
         	pass = request.getParameter("password");
+        	try {
+				loginInfo = LoginService.service(userId);
+			} catch (SQLException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
     		if(userId==null || userId.equals("") || pass==null || pass.equals("")){
     			request.setAttribute("err", "ユーザID/パスワードを入力してください");
     			url = "/adminLogin.jsp";
-    		} else if(userId.equals(Constants.adminUserId) && pass.equals(Constants.adminPass)){
+    		} else if("1".equals(loginInfo.get("loginFlg")) && userId.equals(loginInfo.get("loginId")) && pass.equals(loginInfo.get("loginPass"))){
     			// 管理者用画面・受験者用画面へ遷移できるフラグ
     			flg = "1";
 
@@ -118,10 +128,16 @@ public class ActionServlet extends HttpServlet {
 		} else if(action.equals("examLogin")) {
 			userId = request.getParameter("userId");
         	pass = request.getParameter("password");
+        	try {
+				loginInfo = LoginService.service(userId);
+			} catch (SQLException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
     		if(userId==null || userId.equals("") || pass==null || pass.equals("")){
     			request.setAttribute("err", "ユーザID/パスワードを入力してください");
     			url = "/WEB-INF/examLogin.jsp";
-    		} else if(userId.equals(Constants.examUserId) && pass.equals(Constants.examPass)){
+    		} else if("0".equals(loginInfo.get("loginFlg")) && userId.equals(loginInfo.get("loginId")) && pass.equals(loginInfo.get("loginPass"))){
     			// 受験者用画面へのみ遷移できるフラグ
     			flg = "0";
 
