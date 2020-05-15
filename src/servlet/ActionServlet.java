@@ -40,6 +40,7 @@ public class ActionServlet extends HttpServlet {
 
 	// ログイン情報
 	Map<String, Object> loginInfo;
+	List<Map<String, Object>> loginInfoList;
 
 	private String userId;
 	private String pass;
@@ -206,12 +207,26 @@ public class ActionServlet extends HttpServlet {
 					request.setAttribute("changeflg", changeflg);
 					url = "/WEB-INF/loginInfo.jsp";
 					break;
+				case "delete":
+					changeflg = "2";
+					request.setAttribute("changeflg", changeflg);
+					url = "/WEB-INF/loginInfo.jsp";
+					break;
+				case "loginList":
+					loginInfoList = LoginInfo.loginInfoSelect(lineData);
+					request.setAttribute("loginInfoList",loginInfoList);
+					url = "/WEB-INF/loginInfoList.jsp";
+					break;
 				case "registration":
 					LoginInfoFormAction loginForm = new LoginInfoFormAction();
 					lineData = loginForm.set(request);
 	            	Map<String,String> meMap = loginForm.vali();
 	            	if(changeflg.equals("0")){
 	            		meMap.remove("nowPassMe");
+	            	}else if(changeflg.equals("2")){
+	            		meMap.remove("newPassMe");
+	            		meMap.remove("newPass2Me");
+	            		meMap.remove("authMe");
 	            	}
 	            	if(meMap.isEmpty()) {
 						err = LoginInfo.loginInfoChange(lineData, changeflg);

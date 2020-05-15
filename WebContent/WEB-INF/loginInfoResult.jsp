@@ -17,6 +17,8 @@
 ログイン情報の新規登録が完了しました
 <%} else if (changeflg.equals("1")) {%>
 ログイン情報の変更が完了しました
+<%} else if (changeflg.equals("2")) {%>
+ログイン情報の削除が完了しました
 <%} %>
 <form action="ActionServlet" method="post">
 <button type="submit" class="btn btn-success" name="action" value="examineeInfo">戻る</button><br>

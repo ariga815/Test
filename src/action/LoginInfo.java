@@ -1,6 +1,8 @@
 package action;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import service.LoginInfoService;
@@ -21,5 +23,19 @@ public class LoginInfo {
 			e.printStackTrace();
 		}
 		return err;
+	}
+
+	public static List<Map<String, Object>> loginInfoSelect(Map<String, Object> lineData) {
+		List<Map<String, Object>> loginInfoList = new ArrayList<Map<String, Object>>();
+
+		try {
+			loginInfoList = LoginInfoService.service();
+
+		} catch (SQLException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
+		return loginInfoList;
 	}
 }

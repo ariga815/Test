@@ -57,18 +57,21 @@
 <%}%>
 <button type="submit" class="btn btn-success" name="action" value="newcreate">新規作成</button>
 <button type="submit" class="btn btn-success" name="action" value="change">変更</button>
+<button type="submit" class="btn btn-success" name="action" value="delete">削除</button>
+<button type="submit" class="btn btn-success" name="action" value="loginList">ログイン情報一覧</button>
 <button type="submit" class="btn btn-success" name="action" value="examineeInfo">戻る</button><br>
     <br>
-    <% if (changeflg!=null && (changeflg.equals("1") || changeflg.equals("0"))) {%>
+    <% if (changeflg!=null && (changeflg.equals("1") || changeflg.equals("0") || changeflg.equals("2"))) {%>
 
     <h6>ログインID：<font color="red">${ meMap.get("loginIdMe") }</font></h6>
     <input type="text" name="loginId" class="form-control" id="exampleInputName2" value="<%= StrLoginId %>" maxlength='45'>
 
-	<% if (changeflg.equals("1")) {%>
+	<% if (changeflg.equals("1") || changeflg.equals("2")) {%>
 	<br>
     <h6>現在のパスワード：<font color="red">${ meMap.get("nowPassMe") }</font></h6>
     <input type="password" name="nowPass" class="form-control" id="exampleInputName2" value="<%= StrNowPass %>" maxlength='45'>
     <%} %>
+    <% if (changeflg.equals("1") || changeflg.equals("0")) {%>
 	<br>
     <h6>新しいパスワード：<font color="red">${ meMap.get("newPassMe") }</font></h6>
     <input type="password" name="newPass" class="form-control" id="exampleInputName2" value="<%= StrNewPass %>" maxlength='45'>
@@ -79,6 +82,7 @@
     <h6>アクセス権限：<font color="red">${ meMap.get("authMe") }</font></h6>
     <input type="radio" name=auth value="1" <% if(StrAuth.equals("1")){ out.print("checked"); } %>>管理者<br>
     <input type="radio" name="auth" value="0" <% if(StrAuth.equals("0")){ out.print("checked"); } %>>受験者<br>
+    <%} %>
 
 <br>
 <button type="submit" class="btn btn-success" name="action" value="registration">登録</button>
