@@ -9,7 +9,7 @@
 </head>
 <body>
     <script>
-      alert('このテストは時間管理されています。\n制限時間は５分です。\n「OK」をクリックするとスタートします。');
+      alert('このテストは時間管理されています。\n制限時間は５分です。\nポップアップを閉じるとスタートします。');
     var alertmsg = function(){
   	alert("時間です！\n次のページに進みます。");
   	var test1 = document.getElementById("test4");
