@@ -17,6 +17,8 @@ import action.Chart;
 import action.ExamineeInfo;
 import action.FileDownload;
 import action.FormAction;
+import action.LoginInfo;
+import action.LoginInfoFormAction;
 import action.OutputCsvAction;
 import action.Test1Action;
 import constants.Constants;
@@ -38,6 +40,7 @@ public class ActionServlet extends HttpServlet {
 	private String userId;
 	private String pass;
 	private String flg;
+	private String changeflg;
 
     /**
      * @see HttpServlet#HttpServlet()
@@ -174,6 +177,41 @@ public class ActionServlet extends HttpServlet {
 				case "logout":
 					url = "/adminLogin.jsp";
 					break;
+				case "loginInfo":
+					url = "/WEB-INF/loginInfo.jsp";
+					break;
+				case "newcreate":
+					changeflg = "0";
+					request.setAttribute("changeflg", changeflg);
+					url = "/WEB-INF/loginInfo.jsp";
+					break;
+				case "change":
+					changeflg = "1";
+					request.setAttribute("changeflg", changeflg);
+					url = "/WEB-INF/loginInfo.jsp";
+					break;
+				case "registration":
+					LoginInfoFormAction loginForm = new LoginInfoFormAction();
+					lineData = loginForm.set(request);
+	            	Map<String,String> meMap = loginForm.vali();
+	            	if(changeflg.equals("0")){
+	            		meMap.remove("nowPassMe");
+	            	}
+	            	if(meMap.isEmpty()) {
+						err = LoginInfo.loginInfoChange(lineData, changeflg);
+						request.setAttribute("changeflg", changeflg);
+						if(err!=null){
+							request.setAttribute("err",err);
+			                url = "/WEB-INF/loginInfo.jsp";
+			                break;
+						}
+	            		url = "/WEB-INF/loginInfoResult.jsp";
+	            		break;
+	            	}
+	            	request.setAttribute("meMap", meMap);
+	            	request.setAttribute("changeflg", changeflg);
+	                url = "/WEB-INF/loginInfo.jsp";
+	                break;
 
 				default:
 	            	url = "/adminLogin.jsp";
