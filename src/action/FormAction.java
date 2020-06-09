@@ -33,6 +33,7 @@ public class FormAction {
 		lineData.put("edu", edu);
 		lineData.put("status", status);
 		lineData.put("sonota", sonota);
+		lineData.put("lineStr", name+","+gender+","+birth+","+edu+","+status+","+sonota);
 
 		return lineData;
 	}

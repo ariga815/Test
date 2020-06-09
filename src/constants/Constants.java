@@ -2,7 +2,7 @@ package constants;
 
 public final class Constants {
 	// ファイル出力先ディレクトリ
-	public static final String dir = "/Test";
+	public static final String dir = "/opt/tomcat";
 
 	// 管理者用ユーザID
 	public static final String adminUserId = "admin";

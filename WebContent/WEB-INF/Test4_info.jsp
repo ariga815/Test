@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%String screenFlg = (String)request.getAttribute("screenFlg");%>
+<%String lineStr = (String)request.getAttribute("lineStr");%>
 <html>
 <head>
 <jsp:include page="common.jsp" flush="true" />
@@ -70,6 +72,8 @@
 正解はそれぞれ⑤と①です。
 </div>
 <br>
+<input type="hidden" name="screenFlg" value=<%=screenFlg%>>
+<input type="hidden" name="lineStr" value=<%=lineStr%>>
 <button type="submit" class="btn btn-success" name="action" value="GoToTest4">テスト４本題へ</button>
 </form>
 </div>

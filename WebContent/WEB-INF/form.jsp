@@ -31,6 +31,7 @@
 	  strSonota="";
   }
 %>
+<%String screenFlg = (String)request.getAttribute("screenFlg");%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,6 +72,7 @@
 <input type="radio" name="status" value="worker"<% if(strStatus.equals("worker")){ out.print("checked"); } %>>会社員<br>
 <input type="radio" name="status" value="sonota" <% if(strStatus.equals("sonota")){ out.print("checked"); } %>>その他：<input type="text" name="sonota" value="<%= strSonota %>" maxlength='256'><br>
 <br>
+<input type="hidden" name="screenFlg" value=<%=screenFlg%>>
 <button type="submit" class="btn btn-success" name="action" value="form">送信</button>
 </form>
 </div>

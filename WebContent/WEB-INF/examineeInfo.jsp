@@ -8,6 +8,7 @@
 <% List<Map<String,Object>> examineeInfoList =  (List<Map<String,Object>>)request.getAttribute("ExamineeInfoList"); %>
 <% String flg = (String)request.getAttribute("flg"); %>
 <% String err = (String)request.getAttribute("err"); %>
+<%String screenFlg = (String)request.getAttribute("screenFlg");%>
 <html>
 <head>
 <jsp:include page="common2.jsp" flush="true" />
@@ -61,6 +62,7 @@
         <%} %>
     </table>
 <br>
+<input type="hidden" name="screenFlg" value=<%=screenFlg%>>
 </form>
 </div>
 </body>

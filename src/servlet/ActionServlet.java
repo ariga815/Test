@@ -29,6 +29,7 @@ public class ActionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private Map<String,Object> lineData;
+	private String lineStr;
 	private OutputCsvAction oCA = new OutputCsvAction();
 
 	//受験者一覧
@@ -81,7 +82,8 @@ public class ActionServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		String action = request.getParameter("action");
-
+		flg = request.getParameter("screenFlg");
+		lineStr = request.getParameter("lineStr");
 
         // 遷移先
         String url = null;
@@ -106,6 +108,7 @@ public class ActionServlet extends HttpServlet {
     			}
     			request.setAttribute("ExamineeInfoList", examineeInfoList);
     			request.setAttribute("flg", "1");
+    			request.setAttribute("screenFlg", flg);
     			url = "/WEB-INF/examineeInfo.jsp";
     		} else {
     			request.setAttribute("err", "正しいユーザID/パスワードを入力してください");
@@ -121,7 +124,7 @@ public class ActionServlet extends HttpServlet {
     		} else if(userId.equals(Constants.examUserId) && pass.equals(Constants.examPass)){
     			// 受験者用画面へのみ遷移できるフラグ
     			flg = "0";
-
+    			request.setAttribute("screenFlg", flg);
         		url = "/WEB-INF/top.jsp";
         	} else {
         		request.setAttribute("err", "正しいユーザID/パスワードを入力してください");
@@ -141,6 +144,7 @@ public class ActionServlet extends HttpServlet {
 					}
 					request.setAttribute("ExamineeInfoList", examineeInfoList);
 					request.setAttribute("flg", "1");
+	    			request.setAttribute("screenFlg", flg);
 					url = "/WEB-INF/examineeInfo.jsp";
 					break;
 				case "chart":
@@ -148,6 +152,7 @@ public class ActionServlet extends HttpServlet {
 						request.setAttribute("ExamineeInfoList", examineeInfoList);
 						request.setAttribute("flg", "1");
 						request.setAttribute("err", "受験者を選択してください");
+		    			request.setAttribute("screenFlg", flg);
 						url = "/WEB-INF/examineeInfo.jsp";
 						break;
 					}
@@ -156,10 +161,12 @@ public class ActionServlet extends HttpServlet {
 						request.setAttribute("ExamineeInfoList", examineeInfoList);
 						request.setAttribute("flg", "1");
 						request.setAttribute("err", "データが不正のため、診断表を表示できません");
+		    			request.setAttribute("screenFlg", flg);
 						url = "/WEB-INF/examineeInfo.jsp";
 						break;
 					}
 					request.setAttribute("ExamineeInfo", examineeInfo);
+	    			request.setAttribute("screenFlg", flg);
 					url = "/WEB-INF/chart.jsp";
 					break;
 				case "download":
@@ -169,6 +176,7 @@ public class ActionServlet extends HttpServlet {
 					}
 					request.setAttribute("ExamineeInfoList", examineeInfoList);
 					request.setAttribute("flg", "1");
+	    			request.setAttribute("screenFlg", flg);
 					url = "/WEB-INF/examineeInfo.jsp";
 					break;
 				case "logout":
@@ -183,57 +191,79 @@ public class ActionServlet extends HttpServlet {
 			} else if(flg!=null && flg.equals("0")){
 				switch(action){
 	            case "top":
+	    			request.setAttribute("screenFlg", flg);
 	                url = "/WEB-INF/form.jsp";
 	                break;
 	            case "form":
 	            	FormAction ac = new FormAction();
 	            	lineData = ac.set(request);
 	            	Map<String,String> meMap = ac.vali();
+	            	lineStr = (String) lineData.get("lineStr");
 
 	            	if(meMap.isEmpty()) {
 	            		url = "/WEB-INF/Test1_info.jsp";
 	            		//不正防止のため受験者情報のみCSV出力
 	                	oCA.outUserDataCsv(lineData);
+		    			request.setAttribute("screenFlg", flg);
+		    			request.setAttribute("lineStr", lineStr);
 	            		break;
 	            	}
 	            	request.setAttribute("meMap", meMap);
+	    			request.setAttribute("screenFlg", flg);
+	    			request.setAttribute("lineStr", lineStr);
 	                url = "/WEB-INF/form.jsp";
 	                break;
 	            case "GoToTest1":
+	    			request.setAttribute("screenFlg", flg);
+	    			request.setAttribute("lineStr", lineStr);
 	            	url = "/WEB-INF/Test1.jsp";
 	                break;
 	            case "Test1_submit":
-	            	Test1Action te1 = new Test1Action();
-	            	List<String> te1List = te1.set(request);
-	            	lineData.put("test1",te1List);
+	            	for(int i = 1;i<=40;i++) {
+	        			lineStr += "," + request.getParameter("answer"+i);
+	        		}
+	    			request.setAttribute("screenFlg", flg);
+	    			request.setAttribute("lineStr", lineStr);
 	            	url = "/WEB-INF/Test2_info.jsp";
 	                break;
 	            case "GoToTest2":
+	    			request.setAttribute("screenFlg", flg);
+	    			request.setAttribute("lineStr", lineStr);
 	            	url = "/WEB-INF/Test2.jsp";
 	                break;
 	            case "Test2_submit":
-	            	Test1Action te2 = new Test1Action();
-	            	List<String> te2List = te2.set(request);
-	            	lineData.put("test2",te2List);
+	            	for(int i = 1;i<=40;i++) {
+	        			lineStr += "," + request.getParameter("answer"+i);
+	        		}
+	    			request.setAttribute("screenFlg", flg);
+	    			request.setAttribute("lineStr", lineStr);
 	            	url = "/WEB-INF/Test3_info.jsp";
 	                break;
 	            case "GoToTest3":
+	    			request.setAttribute("screenFlg", flg);
+	    			request.setAttribute("lineStr", lineStr);
 	            	url = "/WEB-INF/Test3.jsp";
 	                break;
 	            case "Test3_submit":
-	            	Test1Action te3 = new Test1Action();
-	            	List<String> te3List = te3.set(request);
-	            	lineData.put("test3",te3List);
+	            	for(int i = 1;i<=40;i++) {
+	        			lineStr += "," + request.getParameter("answer"+i);
+	        		}
+	    			request.setAttribute("screenFlg", flg);
+	    			request.setAttribute("lineStr", lineStr);
 	            	url = "/WEB-INF/Test4_info.jsp";
 	                break;
 	            case "GoToTest4":
+	    			request.setAttribute("screenFlg", flg);
+	    			request.setAttribute("lineStr", lineStr);
 	            	url = "/WEB-INF/Test4.jsp";
 	                break;
 	            case "Test4_submit":
-	            	Test1Action te4 = new Test1Action();
-	            	List<String> te4List = te4.set(request);
-	            	lineData.put("test4",te4List);
+	            	for(int i = 1;i<=40;i++) {
+	        			lineStr += "," + request.getParameter("answer"+i);
+	        		}
 	            	url = "/WEB-INF/end.jsp";
+	            	Test1Action te = new Test1Action();
+	            	lineData = te.set(lineStr);
 	            	//CSV出力（解答）
 	            	oCA.outResultCsv(lineData);
 	            	//CSV出力（正答率）

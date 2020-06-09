@@ -6,6 +6,7 @@
 <%@ page import="java.util.List"%>
 <%@ page import="java.util.Map"%>
 <% Map<String,Object> examineeInfo = (Map<String,Object>)request.getAttribute("ExamineeInfo"); %>
+<%String screenFlg = (String)request.getAttribute("screenFlg");%>
 <html lang="ja">
 <style>
 .table1, .table2, .table3, .table4, .table11, .table6, .table7 {
@@ -258,6 +259,7 @@ function printWeb() {
 </div>
 </div>
 <form>
+<input type="hidden" name="screenFlg" value=<%=screenFlg%>>
 <button type="submit" class="btn btn-success noprint" name="action" value="examineeInfo">戻る</button>
 <input type="button" class="btn btn-success noprint" value="印刷" onClick="printWeb()" onclick="printWindow()">
 </form>

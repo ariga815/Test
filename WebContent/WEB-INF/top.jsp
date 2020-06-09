@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%String screenFlg = (String)request.getAttribute("screenFlg");%>
 <html>
 <head>
 <jsp:include page="common.jsp" flush="true" />
@@ -59,6 +60,7 @@
 </table>
 </div>
 <form action="ActionServlet" method="post">
+<input type="hidden" name="screenFlg" value=<%=screenFlg%>>
 <button type="submit" class="btn btn-success" name="action" value="top">受験者情報入力に進む</button><br>
 </form>
 </div>

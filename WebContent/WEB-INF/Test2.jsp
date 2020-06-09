@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%String screenFlg = (String)request.getAttribute("screenFlg");%>
+<%String lineStr = (String)request.getAttribute("lineStr");%>
 <html>
 <head>
 <jsp:include page="common.jsp" flush="true" />
@@ -391,6 +393,8 @@
 <br>
 <p><b>これでテスト２は終わりです。</b></p><br>
 
+<input type="hidden" name="screenFlg" value=<%=screenFlg%>>
+<input type="hidden" name="lineStr" value=<%=lineStr%>>
 <button type="submit" class="btn btn-success" name="action" value="Test2_submit">送信</button>
 <br><br>
 </form>
